@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alexh\\OneDrive\\Documents\\GitHub\\FYP_A_Employee_Portal\\EmployeePortal\\EmployeePortal\\EmployeePortal.csproj": {}
+    "C:\\Users\\ASUS\\Documents\\GitHub\\FYP_A_Employee_Portal\\EmployeePortal\\EmployeePortal\\EmployeePortal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alexh\\OneDrive\\Documents\\GitHub\\FYP_A_Employee_Portal\\EmployeePortal\\EmployeePortal\\EmployeePortal.csproj": {
+    "C:\\Users\\ASUS\\Documents\\GitHub\\FYP_A_Employee_Portal\\EmployeePortal\\EmployeePortal\\EmployeePortal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alexh\\OneDrive\\Documents\\GitHub\\FYP_A_Employee_Portal\\EmployeePortal\\EmployeePortal\\EmployeePortal.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Documents\\GitHub\\FYP_A_Employee_Portal\\EmployeePortal\\EmployeePortal\\EmployeePortal.csproj",
         "projectName": "EmployeePortal",
-        "projectPath": "C:\\Users\\alexh\\OneDrive\\Documents\\GitHub\\FYP_A_Employee_Portal\\EmployeePortal\\EmployeePortal\\EmployeePortal.csproj",
-        "packagesPath": "C:\\Users\\alexh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alexh\\OneDrive\\Documents\\GitHub\\FYP_A_Employee_Portal\\EmployeePortal\\EmployeePortal\\obj\\",
+        "projectPath": "C:\\Users\\ASUS\\Documents\\GitHub\\FYP_A_Employee_Portal\\EmployeePortal\\EmployeePortal\\EmployeePortal.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ASUS\\Documents\\GitHub\\FYP_A_Employee_Portal\\EmployeePortal\\EmployeePortal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\alexh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
@@ -75,7 +73,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
