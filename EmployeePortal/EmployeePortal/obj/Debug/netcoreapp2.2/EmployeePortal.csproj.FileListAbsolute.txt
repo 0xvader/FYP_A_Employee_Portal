@@ -49,3 +49,5 @@ C:\Users\ASUS\Documents\GitHub\FYP_A_Employee_Portal\EmployeePortal\EmployeePort
 C:\Users\ASUS\Documents\GitHub\FYP_A_Employee_Portal\EmployeePortal\EmployeePortal\obj\Debug\netcoreapp2.2\EmployeePortal.Views.pdb
 C:\Users\ASUS\Documents\GitHub\FYP_A_Employee_Portal\EmployeePortal\EmployeePortal\obj\Debug\netcoreapp2.2\EmployeePortal.csproj.CopyComplete
 C:\Users\ASUS\Documents\GitHub\FYP_A_Employee_Portal\EmployeePortal\EmployeePortal\obj\Debug\netcoreapp2.2\EmployeePortal.genruntimeconfig.cache
+C:\Users\alexh\OneDrive\Documents\GitHub\FYP_A_Employee_Portal\EmployeePortal\EmployeePortal\obj\Debug\netcoreapp2.2\EmployeePortal.genruntimeconfig.cache
+C:\Users\alexh\OneDrive\Documents\GitHub\FYP_A_Employee_Portal\EmployeePortal\EmployeePortal\obj\Debug\netcoreapp2.2\EmployeePortal.csproj.CoreCompileInputs.cache
