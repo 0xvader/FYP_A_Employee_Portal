@@ -90,8 +90,8 @@ Forgot Password?
       type: "POST",
       url: '@Url.Action("Validate", "Account")',
       data: {
-        email: $('#email').val(),
-        password: $('#password').val()
+        empno: $('#empno').val(),
+        emppass: $('#emppass').val()
       },
       error: function (result) {
         alert("There is a Problem, Try Again!");
