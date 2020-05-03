@@ -8,14 +8,14 @@ namespace EmployeePortal
 {
     public class AccountController : Controller
     {
-        bcckContext db = new bcckContext();
+        bcckContext _context = new bcckContext();
         public IActionResult Login()
         {
             return View();
         }
         public ActionResult Validate(Pmast pmast)
         {
-            var _pmast = db.Pmast.Where(s => s.Empno == pmast.Empno);
+            var _pmast = _context.Pmast.Where(s => s.Empno == pmast.Empno);
             if (_pmast.Any())
             {
                 if (_pmast.Where(s => s.Emppass == pmast.Emppass).Any())
@@ -30,7 +30,7 @@ namespace EmployeePortal
             }
             else
             {
-                return Json(new { status = false, message = "Invalid Email!" });
+                return Json(new { status = false, message = "Invalid ID!" });
             }
         }
     }
