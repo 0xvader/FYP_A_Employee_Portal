@@ -386,4 +386,5 @@ C:\Users\sevqu\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\Emplo
 C:\Users\sevqu\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\Employee_Portal_Test\obj\Debug\netcoreapp3.1\Employee_Portal_Test.dll
 C:\Users\sevqu\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\Employee_Portal_Test\obj\Debug\netcoreapp3.1\Employee_Portal_Test.pdb
 C:\Users\sevqu\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\Employee_Portal_Test\obj\Debug\netcoreapp3.1\Employee_Portal_Test.genruntimeconfig.cache
-C:\Users\sevqu\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\Employee_Portal_Test\obj\Debug\netcoreapp3.1\Razor\Views\Admin1.cshtml.g.cs
+C:\Users\sevqu\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\Employee_Portal_Test\obj\Debug\netcoreapp3.1\Razor\Views\Index.cshtml.g.cs
+C:\Users\sevqu\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\Employee_Portal_Test\obj\Debug\netcoreapp3.1\Razor\Views\View.cshtml.g.cs
