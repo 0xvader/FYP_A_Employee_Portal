@@ -20,5 +20,9 @@ namespace Employee_Portal_Test.Controllers
         {
             return View();
         }
+        public IActionResult View1()
+        {
+            return View();
+        }
     }
 }

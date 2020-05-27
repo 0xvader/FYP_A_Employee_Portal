@@ -10,32 +10,20 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Employee_Portal_Test.Migrations
 {
     [DbContext(typeof(bcckContext))]
-    [Migration("20200505130040_Initial-Create")]
-    partial class InitialCreate
+    [Migration("20200527135649_initialcreate")]
+    partial class initialcreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.3")
+                .HasAnnotation("ProductVersion", "3.1.4")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("Employee_Portal_Test.Models.Family", b =>
                 {
-                    b.Property<string>("Nricno")
-                        .HasColumnName("NRICNO")
-                        .HasColumnType("char(15)")
-                        .IsFixedLength(true)
-                        .HasMaxLength(15)
-                        .IsUnicode(false);
-
-                    b.Property<DateTime>("Datebirth")
-                        .HasColumnName("DATEBIRTH")
-                        .HasColumnType("date");
-
                     b.Property<string>("Empno")
-                        .IsRequired()
                         .HasColumnName("EMPNO")
                         .HasColumnType("char(6)")
                         .IsFixedLength(true)
@@ -43,25 +31,32 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Memname")
-                        .IsRequired()
                         .HasColumnName("MEMNAME")
                         .HasColumnType("char(45)")
                         .IsFixedLength(true)
                         .HasMaxLength(45)
                         .IsUnicode(false);
 
+                    b.Property<DateTime?>("Datebirth")
+                        .HasColumnName("DATEBIRTH")
+                        .HasColumnType("date");
+
+                    b.Property<string>("Nricno")
+                        .HasColumnName("NRICNO")
+                        .HasColumnType("char(15)")
+                        .IsFixedLength(true)
+                        .HasMaxLength(15)
+                        .IsUnicode(false);
+
                     b.Property<string>("Sex")
-                        .IsRequired()
                         .HasColumnName("SEX")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
                         .HasMaxLength(1)
                         .IsUnicode(false);
 
-                    b.HasKey("Nricno")
+                    b.HasKey("Empno", "Memname")
                         .HasName("PK_family_1");
-
-                    b.HasIndex("Empno");
 
                     b.ToTable("family");
                 });
@@ -76,7 +71,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Add1")
-                        .IsRequired()
                         .HasColumnName("ADD1")
                         .HasColumnType("char(50)")
                         .IsFixedLength(true)
@@ -84,7 +78,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Add2")
-                        .IsRequired()
                         .HasColumnName("ADD2")
                         .HasColumnType("char(50)")
                         .IsFixedLength(true)
@@ -92,35 +85,33 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Addrtype")
-                        .IsRequired()
                         .HasColumnName("ADDRTYPE")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
                         .HasMaxLength(1)
                         .IsUnicode(false);
 
-                    b.Property<decimal>("Aladj")
+                    b.Property<decimal?>("Aladj")
                         .HasColumnName("ALADJ")
                         .HasColumnType("numeric(9, 2)");
 
-                    b.Property<decimal>("Alall")
+                    b.Property<decimal?>("Alall")
                         .HasColumnName("ALALL")
                         .HasColumnType("numeric(9, 2)");
 
-                    b.Property<decimal>("Albal")
+                    b.Property<decimal?>("Albal")
                         .HasColumnName("ALBAL")
                         .HasColumnType("numeric(6, 2)");
 
-                    b.Property<decimal>("Albf")
+                    b.Property<decimal?>("Albf")
                         .HasColumnName("ALBF")
                         .HasColumnType("numeric(9, 2)");
 
-                    b.Property<decimal>("Alcla")
+                    b.Property<decimal?>("Alcla")
                         .HasColumnName("ALCLA")
                         .HasColumnType("numeric(9, 2)");
 
                     b.Property<string>("Almctbl")
-                        .IsRequired()
                         .HasColumnName("ALMCTBL")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -128,7 +119,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("BPutra")
-                        .IsRequired()
                         .HasColumnName("B_PUTRA")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -136,7 +126,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Badgeno")
-                        .IsRequired()
                         .HasColumnName("BADGENO")
                         .HasColumnType("char(10)")
                         .IsFixedLength(true)
@@ -144,7 +133,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Bankaccno")
-                        .IsRequired()
                         .HasColumnName("BANKACCNO")
                         .HasColumnType("char(20)")
                         .IsFixedLength(true)
@@ -152,7 +140,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Bankcat")
-                        .IsRequired()
                         .HasColumnName("BANKCAT")
                         .HasColumnType("char(2)")
                         .IsFixedLength(true)
@@ -160,7 +147,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Bankcode")
-                        .IsRequired()
                         .HasColumnName("BANKCODE")
                         .HasColumnType("char(12)")
                         .IsFixedLength(true)
@@ -168,7 +154,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Bankic")
-                        .IsRequired()
                         .HasColumnName("BANKIC")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -176,43 +161,40 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Bankpmode")
-                        .IsRequired()
                         .HasColumnName("BANKPMODE")
                         .HasColumnType("char(30)")
                         .IsFixedLength(true)
                         .HasMaxLength(30)
                         .IsUnicode(false);
 
-                    b.Property<decimal>("Bonus")
+                    b.Property<decimal?>("Bonus")
                         .HasColumnName("BONUS")
                         .HasColumnType("numeric(12, 2)");
 
-                    b.Property<decimal>("Bonusfrny")
+                    b.Property<decimal?>("Bonusfrny")
                         .HasColumnName("BONUSFRNY")
                         .HasColumnType("numeric(12, 2)");
 
-                    b.Property<decimal>("Bonustoly")
+                    b.Property<decimal?>("Bonustoly")
                         .HasColumnName("BONUSTOLY")
                         .HasColumnType("numeric(12, 2)");
 
                     b.Property<string>("Brancode")
-                        .IsRequired()
                         .HasColumnName("BRANCODE")
                         .HasColumnType("char(12)")
                         .IsFixedLength(true)
                         .HasMaxLength(12)
                         .IsUnicode(false);
 
-                    b.Property<decimal>("Brate")
+                    b.Property<decimal?>("Brate")
                         .HasColumnName("BRATE")
                         .HasColumnType("numeric(13, 3)");
 
-                    b.Property<decimal>("BrateLm")
+                    b.Property<decimal?>("BrateLm")
                         .HasColumnName("BRATE_LM")
                         .HasColumnType("numeric(13, 3)");
 
                     b.Property<string>("Brcode")
-                        .IsRequired()
                         .HasColumnName("BRCODE")
                         .HasColumnType("char(4)")
                         .IsFixedLength(true)
@@ -220,19 +202,17 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Category")
-                        .IsRequired()
                         .HasColumnName("CATEGORY")
                         .HasColumnType("char(10)")
                         .IsFixedLength(true)
                         .HasMaxLength(10)
                         .IsUnicode(false);
 
-                    b.Property<decimal>("Comm")
+                    b.Property<decimal?>("Comm")
                         .HasColumnName("COMM")
                         .HasColumnType("numeric(12, 2)");
 
                     b.Property<string>("Confid")
-                        .IsRequired()
                         .HasColumnName("CONFID")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -240,23 +220,21 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Contract")
-                        .IsRequired()
                         .HasColumnName("CONTRACT")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
                         .HasMaxLength(1)
                         .IsUnicode(false);
 
-                    b.Property<DateTime>("ContractF")
+                    b.Property<DateTime?>("ContractF")
                         .HasColumnName("CONTRACT_F")
                         .HasColumnType("datetime");
 
-                    b.Property<DateTime>("ContractT")
+                    b.Property<DateTime?>("ContractT")
                         .HasColumnName("CONTRACT_T")
                         .HasColumnType("datetime");
 
                     b.Property<string>("Countryc")
-                        .IsRequired()
                         .HasColumnName("COUNTRYC")
                         .HasColumnType("char(2)")
                         .IsFixedLength(true)
@@ -264,7 +242,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Cp8dgrp")
-                        .IsRequired()
                         .HasColumnName("CP8DGRP")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -272,179 +249,176 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Cp8dgrpi")
-                        .IsRequired()
                         .HasColumnName("CP8DGRPI")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
                         .HasMaxLength(1)
                         .IsUnicode(false);
 
-                    b.Property<int>("CpfCeili")
+                    b.Property<int?>("CpfCeili")
                         .HasColumnName("CPF_CEILI")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("CreatedOn")
+                    b.Property<DateTime?>("CreatedOn")
                         .HasColumnName("CREATED_ON")
                         .HasColumnType("datetime");
 
                     b.Property<string>("Cschmcode")
-                        .IsRequired()
                         .HasColumnName("CSCHMCODE")
                         .HasColumnType("char(4)")
                         .IsFixedLength(true)
                         .HasMaxLength(4)
                         .IsUnicode(false);
 
-                    b.Property<DateTime>("Dateenter")
+                    b.Property<DateTime?>("Dateenter")
                         .HasColumnName("DATEENTER")
                         .HasColumnType("datetime");
 
-                    b.Property<decimal>("Daypmth")
+                    b.Property<decimal?>("Daypmth")
                         .HasColumnName("DAYPMTH")
                         .HasColumnType("numeric(5, 2)");
 
-                    b.Property<decimal>("Dbaw101")
+                    b.Property<decimal?>("Dbaw101")
                         .HasColumnName("DBAW101")
                         .HasColumnType("numeric(12, 2)");
 
-                    b.Property<decimal>("Dbaw102")
+                    b.Property<decimal?>("Dbaw102")
                         .HasColumnName("DBAW102")
                         .HasColumnType("numeric(12, 2)");
 
-                    b.Property<decimal>("Dbaw103")
+                    b.Property<decimal?>("Dbaw103")
                         .HasColumnName("DBAW103")
                         .HasColumnType("numeric(12, 2)");
 
-                    b.Property<decimal>("Dbaw104")
+                    b.Property<decimal?>("Dbaw104")
                         .HasColumnName("DBAW104")
                         .HasColumnType("numeric(12, 2)");
 
-                    b.Property<decimal>("Dbaw105")
+                    b.Property<decimal?>("Dbaw105")
                         .HasColumnName("DBAW105")
                         .HasColumnType("numeric(12, 2)");
 
-                    b.Property<decimal>("Dbaw106")
+                    b.Property<decimal?>("Dbaw106")
                         .HasColumnName("DBAW106")
                         .HasColumnType("numeric(12, 2)");
 
-                    b.Property<decimal>("Dbaw107")
+                    b.Property<decimal?>("Dbaw107")
                         .HasColumnName("DBAW107")
                         .HasColumnType("numeric(12, 2)");
 
-                    b.Property<decimal>("Dbaw108")
+                    b.Property<decimal?>("Dbaw108")
                         .HasColumnName("DBAW108")
                         .HasColumnType("numeric(12, 2)");
 
-                    b.Property<decimal>("Dbaw109")
+                    b.Property<decimal?>("Dbaw109")
                         .HasColumnName("DBAW109")
                         .HasColumnType("numeric(12, 2)");
 
-                    b.Property<decimal>("Dbaw110")
+                    b.Property<decimal?>("Dbaw110")
                         .HasColumnName("DBAW110")
                         .HasColumnType("numeric(12, 2)");
 
-                    b.Property<decimal>("Dbaw111")
+                    b.Property<decimal?>("Dbaw111")
                         .HasColumnName("DBAW111")
                         .HasColumnType("numeric(12, 2)");
 
-                    b.Property<decimal>("Dbaw112")
+                    b.Property<decimal?>("Dbaw112")
                         .HasColumnName("DBAW112")
                         .HasColumnType("numeric(12, 2)");
 
-                    b.Property<decimal>("Dbaw113")
+                    b.Property<decimal?>("Dbaw113")
                         .HasColumnName("DBAW113")
                         .HasColumnType("numeric(12, 2)");
 
-                    b.Property<decimal>("Dbaw114")
+                    b.Property<decimal?>("Dbaw114")
                         .HasColumnName("DBAW114")
                         .HasColumnType("numeric(12, 2)");
 
-                    b.Property<decimal>("Dbaw115")
+                    b.Property<decimal?>("Dbaw115")
                         .HasColumnName("DBAW115")
                         .HasColumnType("numeric(12, 2)");
 
-                    b.Property<decimal>("Dbaw116")
+                    b.Property<decimal?>("Dbaw116")
                         .HasColumnName("DBAW116")
                         .HasColumnType("numeric(12, 2)");
 
-                    b.Property<decimal>("Dbaw117")
+                    b.Property<decimal?>("Dbaw117")
                         .HasColumnName("DBAW117")
                         .HasColumnType("numeric(12, 2)");
 
-                    b.Property<decimal>("Dbded101")
+                    b.Property<decimal?>("Dbded101")
                         .HasColumnName("DBDED101")
                         .HasColumnType("numeric(10, 2)");
 
-                    b.Property<decimal>("Dbded102")
+                    b.Property<decimal?>("Dbded102")
                         .HasColumnName("DBDED102")
                         .HasColumnType("numeric(10, 2)");
 
-                    b.Property<decimal>("Dbded103")
+                    b.Property<decimal?>("Dbded103")
                         .HasColumnName("DBDED103")
                         .HasColumnType("numeric(10, 2)");
 
-                    b.Property<decimal>("Dbded104")
+                    b.Property<decimal?>("Dbded104")
                         .HasColumnName("DBDED104")
                         .HasColumnType("numeric(10, 2)");
 
-                    b.Property<decimal>("Dbded105")
+                    b.Property<decimal?>("Dbded105")
                         .HasColumnName("DBDED105")
                         .HasColumnType("numeric(10, 2)");
 
-                    b.Property<decimal>("Dbded106")
+                    b.Property<decimal?>("Dbded106")
                         .HasColumnName("DBDED106")
                         .HasColumnType("numeric(10, 2)");
 
-                    b.Property<decimal>("Dbded107")
+                    b.Property<decimal?>("Dbded107")
                         .HasColumnName("DBDED107")
                         .HasColumnType("numeric(10, 2)");
 
-                    b.Property<decimal>("Dbded108")
+                    b.Property<decimal?>("Dbded108")
                         .HasColumnName("DBDED108")
                         .HasColumnType("numeric(10, 2)");
 
-                    b.Property<decimal>("Dbded109")
+                    b.Property<decimal?>("Dbded109")
                         .HasColumnName("DBDED109")
                         .HasColumnType("numeric(10, 2)");
 
-                    b.Property<decimal>("Dbded110")
+                    b.Property<decimal?>("Dbded110")
                         .HasColumnName("DBDED110")
                         .HasColumnType("numeric(10, 2)");
 
-                    b.Property<decimal>("Dbded111")
+                    b.Property<decimal?>("Dbded111")
                         .HasColumnName("DBDED111")
                         .HasColumnType("numeric(10, 2)");
 
-                    b.Property<decimal>("Dbded112")
+                    b.Property<decimal?>("Dbded112")
                         .HasColumnName("DBDED112")
                         .HasColumnType("numeric(10, 2)");
 
-                    b.Property<decimal>("Dbded113")
+                    b.Property<decimal?>("Dbded113")
                         .HasColumnName("DBDED113")
                         .HasColumnType("numeric(10, 2)");
 
-                    b.Property<decimal>("Dbded114")
+                    b.Property<decimal?>("Dbded114")
                         .HasColumnName("DBDED114")
                         .HasColumnType("numeric(10, 2)");
 
-                    b.Property<decimal>("Dbded115")
+                    b.Property<decimal?>("Dbded115")
                         .HasColumnName("DBDED115")
                         .HasColumnType("numeric(10, 2)");
 
-                    b.Property<DateTime>("Dbirth")
+                    b.Property<DateTime?>("Dbirth")
                         .HasColumnName("DBIRTH")
                         .HasColumnType("datetime");
 
-                    b.Property<DateTime>("Dcomm")
+                    b.Property<DateTime?>("Dcomm")
                         .HasColumnName("DCOMM")
                         .HasColumnType("datetime");
 
-                    b.Property<DateTime>("Dconfirm")
+                    b.Property<DateTime?>("Dconfirm")
                         .HasColumnName("DCONFIRM")
                         .HasColumnType("datetime");
 
                     b.Property<string>("Dedmem111")
-                        .IsRequired()
                         .HasColumnName("DEDMEM111")
                         .HasColumnType("char(20)")
                         .IsFixedLength(true)
@@ -452,7 +426,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Dedmem112")
-                        .IsRequired()
                         .HasColumnName("DEDMEM112")
                         .HasColumnType("char(20)")
                         .IsFixedLength(true)
@@ -460,7 +433,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Dedmem113")
-                        .IsRequired()
                         .HasColumnName("DEDMEM113")
                         .HasColumnType("char(20)")
                         .IsFixedLength(true)
@@ -468,7 +440,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Dedmem114")
-                        .IsRequired()
                         .HasColumnName("DEDMEM114")
                         .HasColumnType("char(20)")
                         .IsFixedLength(true)
@@ -476,7 +447,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Dedmem115")
-                        .IsRequired()
                         .HasColumnName("DEDMEM115")
                         .HasColumnType("char(20)")
                         .IsFixedLength(true)
@@ -484,43 +454,40 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Deptcode")
-                        .IsRequired()
                         .HasColumnName("DEPTCODE")
                         .HasColumnType("char(10)")
                         .IsFixedLength(true)
                         .HasMaxLength(10)
                         .IsUnicode(false);
 
-                    b.Property<decimal>("Dfundall")
+                    b.Property<decimal?>("Dfundall")
                         .HasColumnName("DFUNDALL")
                         .HasColumnType("numeric(10, 2)");
 
                     b.Property<string>("Dirfset")
-                        .IsRequired()
                         .HasColumnName("DIRFSET")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
                         .HasMaxLength(1)
                         .IsUnicode(false);
 
-                    b.Property<DateTime>("Dpassport")
+                    b.Property<DateTime?>("Dpassport")
                         .HasColumnName("DPASSPORT")
                         .HasColumnType("datetime");
 
-                    b.Property<DateTime>("Dpromote")
+                    b.Property<DateTime?>("Dpromote")
                         .HasColumnName("DPROMOTE")
                         .HasColumnType("datetime");
 
-                    b.Property<DateTime>("Dresign")
+                    b.Property<DateTime?>("Dresign")
                         .HasColumnName("DRESIGN")
                         .HasColumnType("datetime");
 
-                    b.Property<bool>("Du")
+                    b.Property<bool?>("Du")
                         .HasColumnName("DU")
                         .HasColumnType("bit");
 
                     b.Property<string>("EaGrpSn")
-                        .IsRequired()
                         .HasColumnName("EA_GRP_SN")
                         .HasColumnType("char(12)")
                         .IsFixedLength(true)
@@ -528,7 +495,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("EaSn")
-                        .IsRequired()
                         .HasColumnName("EA_SN")
                         .HasColumnType("char(10)")
                         .IsFixedLength(true)
@@ -536,7 +502,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Eadd1")
-                        .IsRequired()
                         .HasColumnName("EADD1")
                         .HasColumnType("char(40)")
                         .IsFixedLength(true)
@@ -544,7 +509,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Eadd2")
-                        .IsRequired()
                         .HasColumnName("EADD2")
                         .HasColumnType("char(40)")
                         .IsFixedLength(true)
@@ -552,7 +516,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Eadd3")
-                        .IsRequired()
                         .HasColumnName("EADD3")
                         .HasColumnType("char(40)")
                         .IsFixedLength(true)
@@ -560,7 +523,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Econtact")
-                        .IsRequired()
                         .HasColumnName("ECONTACT")
                         .HasColumnType("char(24)")
                         .IsFixedLength(true)
@@ -568,7 +530,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Edu")
-                        .IsRequired()
                         .HasColumnName("EDU")
                         .HasColumnType("char(30)")
                         .IsFixedLength(true)
@@ -576,7 +537,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnName("EMAIL")
                         .HasColumnType("char(50)")
                         .IsFixedLength(true)
@@ -584,7 +544,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Emerphone")
-                        .IsRequired()
                         .HasColumnName("EMERPHONE")
                         .HasColumnType("char(24)")
                         .IsFixedLength(true)
@@ -592,7 +551,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Emerrship")
-                        .IsRequired()
                         .HasColumnName("EMERRSHIP")
                         .HasColumnType("char(15)")
                         .IsFixedLength(true)
@@ -600,7 +558,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("EmpCode")
-                        .IsRequired()
                         .HasColumnName("EMP_CODE")
                         .HasColumnType("char(12)")
                         .IsFixedLength(true)
@@ -608,7 +565,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("EmpStatus")
-                        .IsRequired()
                         .HasColumnName("EMP_STATUS")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -616,7 +572,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("EmpType")
-                        .IsRequired()
                         .HasColumnName("EMP_TYPE")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -624,7 +579,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Emppass")
-                        .IsRequired()
                         .HasColumnName("EMPPASS")
                         .HasColumnType("char(15)")
                         .IsFixedLength(true)
@@ -632,7 +586,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Epf1hd")
-                        .IsRequired()
                         .HasColumnName("EPF1HD")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -640,7 +593,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("EpfFyee")
-                        .IsRequired()
                         .HasColumnName("EPF_FYEE")
                         .HasColumnType("char(60)")
                         .IsFixedLength(true)
@@ -648,7 +600,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("EpfFyer")
-                        .IsRequired()
                         .HasColumnName("EPF_FYER")
                         .HasColumnType("char(60)")
                         .IsFixedLength(true)
@@ -656,7 +607,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Epfbrinsbp")
-                        .IsRequired()
                         .HasColumnName("EPFBRINSBP")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -664,7 +614,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Epfbyer")
-                        .IsRequired()
                         .HasColumnName("EPFBYER")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -672,7 +621,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Epfcat")
-                        .IsRequired()
                         .HasColumnName("EPFCAT")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -680,7 +628,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Epfic")
-                        .IsRequired()
                         .HasColumnName("EPFIC")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -688,7 +635,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Epfnk")
-                        .IsRequired()
                         .HasColumnName("EPFNK")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -696,7 +642,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Epfno")
-                        .IsRequired()
                         .HasColumnName("EPFNO")
                         .HasColumnType("char(12)")
                         .IsFixedLength(true)
@@ -704,7 +649,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Epftbl")
-                        .IsRequired()
                         .HasColumnName("EPFTBL")
                         .HasColumnType("char(2)")
                         .IsFixedLength(true)
@@ -712,7 +656,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Epg1hd")
-                        .IsRequired()
                         .HasColumnName("EPG1HD")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -720,7 +663,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Epgbyer")
-                        .IsRequired()
                         .HasColumnName("EPGBYER")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -728,7 +670,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Epgcat")
-                        .IsRequired()
                         .HasColumnName("EPGCAT")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -736,7 +677,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Epgno")
-                        .IsRequired()
                         .HasColumnName("EPGNO")
                         .HasColumnType("char(15)")
                         .IsFixedLength(true)
@@ -744,7 +684,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Epgtbl")
-                        .IsRequired()
                         .HasColumnName("EPGTBL")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -752,7 +691,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Etelno")
-                        .IsRequired()
                         .HasColumnName("ETELNO")
                         .HasColumnType("char(24)")
                         .IsFixedLength(true)
@@ -760,31 +698,28 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Exp")
-                        .IsRequired()
                         .HasColumnName("EXP")
                         .HasColumnType("char(30)")
                         .IsFixedLength(true)
                         .HasMaxLength(30)
                         .IsUnicode(false);
 
-                    b.Property<decimal>("Extra")
+                    b.Property<decimal?>("Extra")
                         .HasColumnName("EXTRA")
                         .HasColumnType("numeric(12, 2)");
 
                     b.Property<string>("Finno")
-                        .IsRequired()
                         .HasColumnName("FINNO")
                         .HasColumnType("char(21)")
                         .IsFixedLength(true)
                         .HasMaxLength(21)
                         .IsUnicode(false);
 
-                    b.Property<decimal>("Fwlevyadj")
+                    b.Property<decimal?>("Fwlevyadj")
                         .HasColumnName("FWLEVYADJ")
                         .HasColumnType("numeric(6, 2)");
 
                     b.Property<string>("Fwlevymtd")
-                        .IsRequired()
                         .HasColumnName("FWLEVYMTD")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -792,27 +727,25 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Fwlevytbl")
-                        .IsRequired()
                         .HasColumnName("FWLEVYTBL")
                         .HasColumnType("char(2)")
                         .IsFixedLength(true)
                         .HasMaxLength(2)
                         .IsUnicode(false);
 
-                    b.Property<decimal>("HrpBrate")
+                    b.Property<decimal?>("HrpBrate")
                         .HasColumnName("HRP_BRATE")
                         .HasColumnType("numeric(13, 4)");
 
-                    b.Property<decimal>("HrpLm")
+                    b.Property<decimal?>("HrpLm")
                         .HasColumnName("HRP_LM")
                         .HasColumnType("numeric(13, 4)");
 
-                    b.Property<decimal>("HrpTm")
+                    b.Property<decimal?>("HrpTm")
                         .HasColumnName("HRP_TM")
                         .HasColumnType("numeric(13, 4)");
 
                     b.Property<string>("Iccolor")
-                        .IsRequired()
                         .HasColumnName("ICCOLOR")
                         .HasColumnType("char(3)")
                         .IsFixedLength(true)
@@ -820,7 +753,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Icinssocno")
-                        .IsRequired()
                         .HasColumnName("ICINSSOCNO")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -828,7 +760,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Imigrano")
-                        .IsRequired()
                         .HasColumnName("IMIGRANO")
                         .HasColumnType("char(20)")
                         .IsFixedLength(true)
@@ -843,16 +774,15 @@ namespace Employee_Portal_Test.Migrations
                         .HasMaxLength(3)
                         .IsUnicode(false);
 
-                    b.Property<decimal>("IncAmt")
+                    b.Property<decimal?>("IncAmt")
                         .HasColumnName("INC_AMT")
                         .HasColumnType("numeric(12, 2)");
 
-                    b.Property<DateTime>("IncDate")
+                    b.Property<DateTime?>("IncDate")
                         .HasColumnName("INC_DATE")
                         .HasColumnType("datetime");
 
                     b.Property<string>("Iskerja")
-                        .IsRequired()
                         .HasColumnName("ISKERJA")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -860,7 +790,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Itaxbran")
-                        .IsRequired()
                         .HasColumnName("ITAXBRAN")
                         .HasColumnType("char(15)")
                         .IsFixedLength(true)
@@ -868,7 +797,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Itaxcat")
-                        .IsRequired()
                         .HasColumnName("ITAXCAT")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -876,7 +804,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Itaxno")
-                        .IsRequired()
                         .HasColumnName("ITAXNO")
                         .HasColumnType("char(20)")
                         .IsFixedLength(true)
@@ -884,7 +811,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Itaxnoki")
-                        .IsRequired()
                         .HasColumnName("ITAXNOKI")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -892,7 +818,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Itaxtbl")
-                        .IsRequired()
                         .HasColumnName("ITAXTBL")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -900,7 +825,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Jfunction")
-                        .IsRequired()
                         .HasColumnName("JFUNCTION")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -908,7 +832,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Jobcode")
-                        .IsRequired()
                         .HasColumnName("JOBCODE")
                         .HasColumnType("char(4)")
                         .IsFixedLength(true)
@@ -916,7 +839,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Jstacode")
-                        .IsRequired()
                         .HasColumnName("JSTACODE")
                         .HasColumnType("char(2)")
                         .IsFixedLength(true)
@@ -924,7 +846,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Jtitle")
-                        .IsRequired()
                         .HasColumnName("JTITLE")
                         .HasColumnType("char(40)")
                         .IsFixedLength(true)
@@ -932,7 +853,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Keyuser")
-                        .IsRequired()
                         .HasColumnName("KEYUSER")
                         .HasColumnType("char(6)")
                         .IsFixedLength(true)
@@ -940,43 +860,41 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Lschmcode")
-                        .IsRequired()
                         .HasColumnName("LSCHMCODE")
                         .HasColumnType("char(4)")
                         .IsFixedLength(true)
                         .HasMaxLength(4)
                         .IsUnicode(false);
 
-                    b.Property<decimal>("Lvetocash")
+                    b.Property<decimal?>("Lvetocash")
                         .HasColumnName("LVETOCASH")
                         .HasColumnType("numeric(12, 2)");
 
-                    b.Property<decimal>("LyDEpf")
+                    b.Property<decimal?>("LyDEpf")
                         .HasColumnName("LY_D_EPF")
                         .HasColumnType("numeric(15, 2)");
 
-                    b.Property<decimal>("LyDTxamt")
+                    b.Property<decimal?>("LyDTxamt")
                         .HasColumnName("LY_D_TXAMT")
                         .HasColumnType("numeric(15, 2)");
 
-                    b.Property<decimal>("MIncAmt")
+                    b.Property<decimal?>("MIncAmt")
                         .HasColumnName("M_INC_AMT")
                         .HasColumnType("numeric(12, 2)");
 
-                    b.Property<DateTime>("MIncDate")
+                    b.Property<DateTime?>("MIncDate")
                         .HasColumnName("M_INC_DATE")
                         .HasColumnType("datetime");
 
-                    b.Property<decimal>("Mcall")
+                    b.Property<decimal?>("Mcall")
                         .HasColumnName("MCALL")
                         .HasColumnType("numeric(9, 2)");
 
-                    b.Property<decimal>("Mcbal")
+                    b.Property<decimal?>("Mcbal")
                         .HasColumnName("MCBAL")
                         .HasColumnType("numeric(6, 2)");
 
                     b.Property<string>("Meditbl")
-                        .IsRequired()
                         .HasColumnName("MEDITBL")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -984,19 +902,17 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Meps")
-                        .IsRequired()
                         .HasColumnName("MEPS")
                         .HasColumnType("char(20)")
                         .IsFixedLength(true)
                         .HasMaxLength(20)
                         .IsUnicode(false);
 
-                    b.Property<decimal>("Mfundall")
+                    b.Property<decimal?>("Mfundall")
                         .HasColumnName("MFUNDALL")
                         .HasColumnType("numeric(10, 2)");
 
                     b.Property<string>("Mstatus")
-                        .IsRequired()
                         .HasColumnName("MSTATUS")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1004,7 +920,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Mstatusod")
-                        .IsRequired()
                         .HasColumnName("MSTATUSOD")
                         .HasColumnType("char(15)")
                         .IsFixedLength(true)
@@ -1012,7 +927,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("MustprSoc")
-                        .IsRequired()
                         .HasColumnName("MUSTPR_SOC")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1028,31 +942,29 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("National")
-                        .IsRequired()
                         .HasColumnName("NATIONAL")
                         .HasColumnType("char(2)")
                         .IsFixedLength(true)
                         .HasMaxLength(2)
                         .IsUnicode(false);
 
-                    b.Property<int>("NmPcb")
+                    b.Property<int?>("NmPcb")
                         .HasColumnName("NM_PCB")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("Noadvday")
+                    b.Property<decimal?>("Noadvday")
                         .HasColumnName("NOADVDAY")
                         .HasColumnType("numeric(8, 2)");
 
-                    b.Property<int>("Nochild")
+                    b.Property<int?>("Nochild")
                         .HasColumnName("NOCHILD")
                         .HasColumnType("int");
 
-                    b.Property<int>("Nppm")
+                    b.Property<int?>("Nppm")
                         .HasColumnName("NPPM")
                         .HasColumnType("int");
 
                     b.Property<string>("Nric")
-                        .IsRequired()
                         .HasColumnName("NRIC")
                         .HasColumnType("char(15)")
                         .IsFixedLength(true)
@@ -1060,31 +972,29 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Nricn")
-                        .IsRequired()
                         .HasColumnName("NRICN")
                         .HasColumnType("char(22)")
                         .IsFixedLength(true)
                         .HasMaxLength(22)
                         .IsUnicode(false);
 
-                    b.Property<decimal>("NumChild")
+                    b.Property<decimal?>("NumChild")
                         .HasColumnName("NUM_CHILD")
                         .HasColumnType("numeric(4, 1)");
 
-                    b.Property<int>("Numchild1")
+                    b.Property<int?>("Numchild1")
                         .HasColumnName("NUMCHILD")
                         .HasColumnType("int");
 
-                    b.Property<decimal>("OrpLm")
+                    b.Property<decimal?>("OrpLm")
                         .HasColumnName("ORP_LM")
                         .HasColumnType("numeric(13, 4)");
 
-                    b.Property<decimal>("OrpTm")
+                    b.Property<decimal?>("OrpTm")
                         .HasColumnName("ORP_TM")
                         .HasColumnType("numeric(13, 4)");
 
                     b.Property<string>("OtMaxpay")
-                        .IsRequired()
                         .HasColumnName("OT_MAXPAY")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1092,7 +1002,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Otcode")
-                        .IsRequired()
                         .HasColumnName("OTCODE")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1100,7 +1009,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Otraterc")
-                        .IsRequired()
                         .HasColumnName("OTRATERC")
                         .HasColumnType("char(2)")
                         .IsFixedLength(true)
@@ -1108,7 +1016,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Ottbl")
-                        .IsRequired()
                         .HasColumnName("OTTBL")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1116,7 +1023,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Passport")
-                        .IsRequired()
                         .HasColumnName("PASSPORT")
                         .HasColumnType("char(12)")
                         .IsFixedLength(true)
@@ -1124,7 +1030,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Paymeth")
-                        .IsRequired()
                         .HasColumnName("PAYMETH")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1132,7 +1037,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Payrtype")
-                        .IsRequired()
                         .HasColumnName("PAYRTYPE")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1140,19 +1044,17 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Paystatus")
-                        .IsRequired()
                         .HasColumnName("PAYSTATUS")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
                         .HasMaxLength(1)
                         .IsUnicode(false);
 
-                    b.Property<int>("PbonusMth")
+                    b.Property<int?>("PbonusMth")
                         .HasColumnName("PBONUS_MTH")
                         .HasColumnType("int");
 
                     b.Property<string>("Pcb1hd")
-                        .IsRequired()
                         .HasColumnName("PCB1HD")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1160,7 +1062,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Pcbbyer")
-                        .IsRequired()
                         .HasColumnName("PCBBYER")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1168,7 +1069,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Phone")
-                        .IsRequired()
                         .HasColumnName("PHONE")
                         .HasColumnType("char(24)")
                         .IsFixedLength(true)
@@ -1176,7 +1076,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Phone2")
-                        .IsRequired()
                         .HasColumnName("PHONE2")
                         .HasColumnType("char(24)")
                         .IsFixedLength(true)
@@ -1184,13 +1083,11 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Photo")
-                        .IsRequired()
                         .HasColumnName("PHOTO")
                         .HasColumnType("varchar(max)")
                         .IsUnicode(false);
 
                     b.Property<string>("Photodir")
-                        .IsRequired()
                         .HasColumnName("PHOTODIR")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1198,7 +1095,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Plineno")
-                        .IsRequired()
                         .HasColumnName("PLINENO")
                         .HasColumnType("char(10)")
                         .IsFixedLength(true)
@@ -1206,19 +1102,17 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Postcode")
-                        .IsRequired()
                         .HasColumnName("POSTCODE")
                         .HasColumnType("char(6)")
                         .IsFixedLength(true)
                         .HasMaxLength(6)
                         .IsUnicode(false);
 
-                    b.Property<DateTime>("PrFrom")
+                    b.Property<DateTime?>("PrFrom")
                         .HasColumnName("PR_FROM")
                         .HasColumnType("datetime");
 
                     b.Property<string>("PrNum")
-                        .IsRequired()
                         .HasColumnName("PR_NUM")
                         .HasColumnType("char(20)")
                         .IsFixedLength(true)
@@ -1226,7 +1120,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("PrRate")
-                        .IsRequired()
                         .HasColumnName("PR_RATE")
                         .HasColumnType("char(2)")
                         .IsFixedLength(true)
@@ -1234,7 +1127,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("PrnEa")
-                        .IsRequired()
                         .HasColumnName("PRN_EA")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1242,7 +1134,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("PrnIr8s")
-                        .IsRequired()
                         .HasColumnName("PRN_IR8S")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1250,7 +1141,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("RStatu")
-                        .IsRequired()
                         .HasColumnName("R_STATU")
                         .HasColumnType("char(2)")
                         .IsFixedLength(true)
@@ -1258,7 +1148,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Race")
-                        .IsRequired()
                         .HasColumnName("RACE")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1266,7 +1155,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Relcode")
-                        .IsRequired()
                         .HasColumnName("RELCODE")
                         .HasColumnType("char(2)")
                         .IsFixedLength(true)
@@ -1274,19 +1162,17 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Remark")
-                        .IsRequired()
                         .HasColumnName("REMARK")
                         .HasColumnType("char(100)")
                         .IsFixedLength(true)
                         .HasMaxLength(100)
                         .IsUnicode(false);
 
-                    b.Property<int>("Restwkday")
+                    b.Property<int?>("Restwkday")
                         .HasColumnName("RESTWKDAY")
                         .HasColumnType("int");
 
                     b.Property<string>("Sex")
-                        .IsRequired()
                         .HasColumnName("SEX")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1294,7 +1180,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Shifttbl")
-                        .IsRequired()
                         .HasColumnName("SHIFTTBL")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1302,7 +1187,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Sitbranch")
-                        .IsRequired()
                         .HasColumnName("SITBRANCH")
                         .HasColumnType("char(15)")
                         .IsFixedLength(true)
@@ -1310,7 +1194,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Sname")
-                        .IsRequired()
                         .HasColumnName("SNAME")
                         .HasColumnType("char(30)")
                         .IsFixedLength(true)
@@ -1318,7 +1201,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Snric")
-                        .IsRequired()
                         .HasColumnName("SNRIC")
                         .HasColumnType("char(22)")
                         .IsFixedLength(true)
@@ -1326,7 +1208,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Soaso1hd")
-                        .IsRequired()
                         .HasColumnName("SOASO1HD")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1334,7 +1215,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Soasobyer")
-                        .IsRequired()
                         .HasColumnName("SOASOBYER")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1342,7 +1222,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Soasocat")
-                        .IsRequired()
                         .HasColumnName("SOASOCAT")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1350,7 +1229,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Soasono")
-                        .IsRequired()
                         .HasColumnName("SOASONO")
                         .HasColumnType("char(15)")
                         .IsFixedLength(true)
@@ -1358,7 +1236,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Soasotbl")
-                        .IsRequired()
                         .HasColumnName("SOASOTBL")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1366,7 +1243,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Sobso1hd")
-                        .IsRequired()
                         .HasColumnName("SOBSO1HD")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1374,7 +1250,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Sobsobyer")
-                        .IsRequired()
                         .HasColumnName("SOBSOBYER")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1382,7 +1257,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Sobsocat")
-                        .IsRequired()
                         .HasColumnName("SOBSOCAT")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1390,7 +1264,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Sobsono")
-                        .IsRequired()
                         .HasColumnName("SOBSONO")
                         .HasColumnType("char(15)")
                         .IsFixedLength(true)
@@ -1398,7 +1271,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Sobsotbl")
-                        .IsRequired()
                         .HasColumnName("SOBSOTBL")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1406,7 +1278,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Socso1hd")
-                        .IsRequired()
                         .HasColumnName("SOCSO1HD")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1414,7 +1285,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Socsobyer")
-                        .IsRequired()
                         .HasColumnName("SOCSOBYER")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1422,7 +1292,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Socsocat")
-                        .IsRequired()
                         .HasColumnName("SOCSOCAT")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1430,7 +1299,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Socsoic")
-                        .IsRequired()
                         .HasColumnName("SOCSOIC")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1438,7 +1306,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Socsoinit")
-                        .IsRequired()
                         .HasColumnName("SOCSOINIT")
                         .HasColumnType("char(5)")
                         .IsFixedLength(true)
@@ -1446,7 +1313,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Socsono")
-                        .IsRequired()
                         .HasColumnName("SOCSONO")
                         .HasColumnType("char(15)")
                         .IsFixedLength(true)
@@ -1454,7 +1320,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Socsotbl")
-                        .IsRequired()
                         .HasColumnName("SOCSOTBL")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1462,7 +1327,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Sodso1hd")
-                        .IsRequired()
                         .HasColumnName("SODSO1HD")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1470,7 +1334,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Sodsobyer")
-                        .IsRequired()
                         .HasColumnName("SODSOBYER")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1478,7 +1341,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Sodsocat")
-                        .IsRequired()
                         .HasColumnName("SODSOCAT")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1486,7 +1348,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Sodsono")
-                        .IsRequired()
                         .HasColumnName("SODSONO")
                         .HasColumnType("char(15)")
                         .IsFixedLength(true)
@@ -1494,7 +1355,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Sodsotbl")
-                        .IsRequired()
                         .HasColumnName("SODSOTBL")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1502,7 +1362,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Soeso1hd")
-                        .IsRequired()
                         .HasColumnName("SOESO1HD")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1510,7 +1369,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Soesobyer")
-                        .IsRequired()
                         .HasColumnName("SOESOBYER")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1518,7 +1376,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Soesocat")
-                        .IsRequired()
                         .HasColumnName("SOESOCAT")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1526,7 +1383,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Soesono")
-                        .IsRequired()
                         .HasColumnName("SOESONO")
                         .HasColumnType("char(15)")
                         .IsFixedLength(true)
@@ -1534,7 +1390,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Soesotbl")
-                        .IsRequired()
                         .HasColumnName("SOESOTBL")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1542,7 +1397,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Source")
-                        .IsRequired()
                         .HasColumnName("SOURCE")
                         .HasColumnType("char(10)")
                         .IsFixedLength(true)
@@ -1550,7 +1404,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Stat11hd")
-                        .IsRequired()
                         .HasColumnName("STAT11HD")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1558,35 +1411,33 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("State")
-                        .IsRequired()
                         .HasColumnName("STATE")
                         .HasColumnType("char(15)")
                         .IsFixedLength(true)
                         .HasMaxLength(15)
                         .IsUnicode(false);
 
-                    b.Property<bool>("Su")
+                    b.Property<bool?>("Su")
                         .HasColumnName("SU")
                         .HasColumnType("bit");
 
-                    b.Property<decimal>("Tempfig1")
+                    b.Property<decimal?>("Tempfig1")
                         .HasColumnName("TEMPFIG1")
                         .HasColumnType("numeric(14, 2)");
 
-                    b.Property<decimal>("Tempfig2")
+                    b.Property<decimal?>("Tempfig2")
                         .HasColumnName("TEMPFIG2")
                         .HasColumnType("numeric(14, 2)");
 
-                    b.Property<decimal>("Tempfig3")
+                    b.Property<decimal?>("Tempfig3")
                         .HasColumnName("TEMPFIG3")
                         .HasColumnType("numeric(14, 2)");
 
-                    b.Property<decimal>("Tempfig4")
+                    b.Property<decimal?>("Tempfig4")
                         .HasColumnName("TEMPFIG4")
                         .HasColumnType("numeric(14, 2)");
 
                     b.Property<string>("Tempstr1")
-                        .IsRequired()
                         .HasColumnName("TEMPSTR1")
                         .HasColumnType("char(30)")
                         .IsFixedLength(true)
@@ -1594,7 +1445,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Town")
-                        .IsRequired()
                         .HasColumnName("TOWN")
                         .HasColumnType("char(15)")
                         .IsFixedLength(true)
@@ -1602,7 +1452,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Trancode")
-                        .IsRequired()
                         .HasColumnName("TRANCODE")
                         .HasColumnType("char(2)")
                         .IsFixedLength(true)
@@ -1610,7 +1459,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("TxDedSp")
-                        .IsRequired()
                         .HasColumnName("TX_DED_SP")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1618,7 +1466,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Unempitbl")
-                        .IsRequired()
                         .HasColumnName("UNEMPITBL")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1626,7 +1473,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Union1hd")
-                        .IsRequired()
                         .HasColumnName("UNION1HD")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1634,7 +1480,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Unionbyer")
-                        .IsRequired()
                         .HasColumnName("UNIONBYER")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1642,7 +1487,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Unioncat")
-                        .IsRequired()
                         .HasColumnName("UNIONCAT")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1650,7 +1494,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Unionno")
-                        .IsRequired()
                         .HasColumnName("UNIONNO")
                         .HasColumnType("char(15)")
                         .IsFixedLength(true)
@@ -1658,19 +1501,17 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Uniontbl")
-                        .IsRequired()
                         .HasColumnName("UNIONTBL")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
                         .HasMaxLength(1)
                         .IsUnicode(false);
 
-                    b.Property<DateTime>("UpdatedOn")
+                    b.Property<DateTime?>("UpdatedOn")
                         .HasColumnName("UPDATED_ON")
                         .HasColumnType("datetime");
 
                     b.Property<string>("Weekpay")
-                        .IsRequired()
                         .HasColumnName("WEEKPAY")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1678,7 +1519,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Whtbl")
-                        .IsRequired()
                         .HasColumnName("WHTBL")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1686,7 +1526,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Withbopcb")
-                        .IsRequired()
                         .HasColumnName("WITHBOPCB")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1694,7 +1533,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Withcopcb")
-                        .IsRequired()
                         .HasColumnName("WITHCOPCB")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1702,7 +1540,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Withhrdf")
-                        .IsRequired()
                         .HasColumnName("WITHHRDF")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1710,7 +1547,6 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Withpcb")
-                        .IsRequired()
                         .HasColumnName("WITHPCB")
                         .HasColumnType("char(1)")
                         .IsFixedLength(true)
@@ -1718,23 +1554,21 @@ namespace Employee_Portal_Test.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("Workgrpid")
-                        .IsRequired()
                         .HasColumnName("WORKGRPID")
                         .HasColumnType("char(8)")
                         .IsFixedLength(true)
                         .HasMaxLength(8)
                         .IsUnicode(false);
 
-                    b.Property<DateTime>("WpFrom")
+                    b.Property<DateTime?>("WpFrom")
                         .HasColumnName("WP_FROM")
                         .HasColumnType("datetime");
 
-                    b.Property<DateTime>("WpTo")
+                    b.Property<DateTime?>("WpTo")
                         .HasColumnName("WP_TO")
                         .HasColumnType("datetime");
 
                     b.Property<string>("Wpermit")
-                        .IsRequired()
                         .HasColumnName("WPERMIT")
                         .HasColumnType("char(20)")
                         .IsFixedLength(true)

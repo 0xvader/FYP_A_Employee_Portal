@@ -9,7 +9,7 @@ namespace Employee_Portal_Test.Models
         public string Memname { get; set; }
         public string Nricno { get; set; }
         public string Sex { get; set; }
-        public DateTime Datebirth { get; set; }
+        public DateTime? Datebirth { get; set; }
 
         public virtual Pmast EmpnoNavigation { get; set; }
     }
