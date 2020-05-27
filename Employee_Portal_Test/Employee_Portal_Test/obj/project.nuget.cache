@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "36+UeNRXWEjIQxv6XY1oKHvfHAxv1h30TAweqiSX7e85ObGrbxe8RltY30gcC/RlwZK8cdwIskTgCdNX00UPlw==",
+  "dgSpecHash": "lGOwaTNNcuMG/K4awH2/oWjO1BJIxEBTziv8/CC4WhLvWgfbkWByLwnq+dczT4vGm6xOiPFtWP76OjSdmYLcWg==",
   "success": true,
   "projectFilePath": "C:\\Users\\sevqu\\Documents\\GitHub\\FYP_A_Employee_Portal\\Employee_Portal_Test\\Employee_Portal_Test\\Employee_Portal_Test.csproj",
   "expectedPackageFiles": [
@@ -164,7 +164,8 @@
     "C:\\Users\\sevqu\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\sevqu\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\sevqu\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\sevqu\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\sevqu\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\sevqu\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
   ],
   "logs": []
 }
