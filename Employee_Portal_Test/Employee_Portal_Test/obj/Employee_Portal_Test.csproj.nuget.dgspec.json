@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sevqu\\Documents\\GitHub\\FYP_A_Employee_Portal\\Employee_Portal_Test\\Employee_Portal_Test\\Employee_Portal_Test.csproj": {}
+    "C:\\Users\\ASUS\\Documents\\GitHub\\FYP_A_Employee_Portal\\Employee_Portal_Test\\Employee_Portal_Test\\Employee_Portal_Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sevqu\\Documents\\GitHub\\FYP_A_Employee_Portal\\Employee_Portal_Test\\Employee_Portal_Test\\Employee_Portal_Test.csproj": {
+    "C:\\Users\\ASUS\\Documents\\GitHub\\FYP_A_Employee_Portal\\Employee_Portal_Test\\Employee_Portal_Test\\Employee_Portal_Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sevqu\\Documents\\GitHub\\FYP_A_Employee_Portal\\Employee_Portal_Test\\Employee_Portal_Test\\Employee_Portal_Test.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Documents\\GitHub\\FYP_A_Employee_Portal\\Employee_Portal_Test\\Employee_Portal_Test\\Employee_Portal_Test.csproj",
         "projectName": "Employee_Portal_Test",
-        "projectPath": "C:\\Users\\sevqu\\Documents\\GitHub\\FYP_A_Employee_Portal\\Employee_Portal_Test\\Employee_Portal_Test\\Employee_Portal_Test.csproj",
-        "packagesPath": "C:\\Users\\sevqu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sevqu\\Documents\\GitHub\\FYP_A_Employee_Portal\\Employee_Portal_Test\\Employee_Portal_Test\\obj\\",
+        "projectPath": "C:\\Users\\ASUS\\Documents\\GitHub\\FYP_A_Employee_Portal\\Employee_Portal_Test\\Employee_Portal_Test\\Employee_Portal_Test.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ASUS\\Documents\\GitHub\\FYP_A_Employee_Portal\\Employee_Portal_Test\\Employee_Portal_Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\sevqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -78,12 +78,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.2, 3.1.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -92,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
