@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bcckModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="family">
+    <Key>
+      <PropertyRef Name="EMPNO" />
+      <PropertyRef Name="MEMNAME" />
+    </Key>
+    <Property Name="EMPNO" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="MEMNAME" Type="char" MaxLength="45" Nullable="false" />
+    <Property Name="NRICNO" Type="char" MaxLength="15" />
+    <Property Name="SEX" Type="char" MaxLength="1" />
+    <Property Name="DATEBIRTH" Type="date" />
+  </EntityType>
+  <EntityType Name="pmast">
+    <Key>
+      <PropertyRef Name="EMPNO" />
+    </Key>
+    <Property Name="EMPNO" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="EMP_CODE" Type="char" MaxLength="12" />
+    <Property Name="NAME" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="INAME" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="ADD1" Type="char" MaxLength="50" />
+    <Property Name="ADD2" Type="char" MaxLength="50" />
+    <Property Name="POSTCODE" Type="char" MaxLength="6" />
+    <Property Name="TOWN" Type="char" MaxLength="15" />
+    <Property Name="STATE" Type="char" MaxLength="15" />
+    <Property Name="PHONE" Type="char" MaxLength="24" />
+    <Property Name="DBIRTH" Type="datetime" />
+    <Property Name="NRIC" Type="char" MaxLength="15" />
+    <Property Name="NRICN" Type="char" MaxLength="22" />
+    <Property Name="ICCOLOR" Type="char" MaxLength="3" />
+    <Property Name="NATIONAL" Type="char" MaxLength="2" />
+    <Property Name="PASSPORT" Type="char" MaxLength="12" />
+    <Property Name="SEX" Type="char" MaxLength="1" />
+    <Property Name="MSTATUS" Type="char" MaxLength="1" />
+    <Property Name="MSTATUSOD" Type="char" MaxLength="15" />
+    <Property Name="RACE" Type="char" MaxLength="1" />
+    <Property Name="B_PUTRA" Type="char" MaxLength="1" />
+    <Property Name="EDU" Type="char" MaxLength="30" />
+    <Property Name="EXP" Type="char" MaxLength="30" />
+    <Property Name="SNAME" Type="char" MaxLength="30" />
+    <Property Name="SNRIC" Type="char" MaxLength="22" />
+    <Property Name="SITBRANCH" Type="char" MaxLength="15" />
+    <Property Name="ISKERJA" Type="char" MaxLength="1" />
+    <Property Name="TX_DED_SP" Type="char" MaxLength="1" />
+    <Property Name="NUM_CHILD" Type="numeric" Precision="4" Scale="1" />
+    <Property Name="NUMCHILD" Type="int" />
+    <Property Name="NOCHILD" Type="int" />
+    <Property Name="ECONTACT" Type="char" MaxLength="24" />
+    <Property Name="ETELNO" Type="char" MaxLength="24" />
+    <Property Name="EADD1" Type="char" MaxLength="40" />
+    <Property Name="EADD2" Type="char" MaxLength="40" />
+    <Property Name="EADD3" Type="char" MaxLength="40" />
+    <Property Name="CATEGORY" Type="char" MaxLength="10" />
+    <Property Name="SOURCE" Type="char" MaxLength="10" />
+    <Property Name="PLINENO" Type="char" MaxLength="10" />
+    <Property Name="JTITLE" Type="char" MaxLength="40" />
+    <Property Name="DCOMM" Type="datetime" />
+    <Property Name="DCONFIRM" Type="datetime" />
+    <Property Name="DPROMOTE" Type="datetime" />
+    <Property Name="DRESIGN" Type="datetime" />
+    <Property Name="R_STATU" Type="char" MaxLength="2" />
+    <Property Name="PR_NUM" Type="char" MaxLength="20" />
+    <Property Name="PR_FROM" Type="datetime" />
+    <Property Name="IMIGRANO" Type="char" MaxLength="20" />
+    <Property Name="WPERMIT" Type="char" MaxLength="20" />
+    <Property Name="WP_FROM" Type="datetime" />
+    <Property Name="WP_TO" Type="datetime" />
+    <Property Name="EMPPASS" Type="char" MaxLength="15" />
+    <Property Name="FWLEVYTBL" Type="char" MaxLength="2" />
+    <Property Name="FWLEVYMTD" Type="char" MaxLength="1" />
+    <Property Name="FWLEVYADJ" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="EPFNO" Type="char" MaxLength="12" />
+    <Property Name="EPFNK" Type="char" MaxLength="1" />
+    <Property Name="EPFTBL" Type="char" MaxLength="2" />
+    <Property Name="EPFCAT" Type="char" MaxLength="1" />
+    <Property Name="CPF_CEILI" Type="int" />
+    <Property Name="EPF_FYEE" Type="char" MaxLength="60" />
+    <Property Name="EPF_FYER" Type="char" MaxLength="60" />
+    <Property Name="EPGNO" Type="char" MaxLength="15" />
+    <Property Name="EPGTBL" Type="char" MaxLength="1" />
+    <Property Name="EPGCAT" Type="char" MaxLength="1" />
+    <Property Name="SOCSONO" Type="char" MaxLength="15" />
+    <Property Name="SOCSOTBL" Type="char" MaxLength="1" />
+    <Property Name="SOCSOCAT" Type="char" MaxLength="1" />
+    <Property Name="SOCSOIC" Type="char" MaxLength="1" />
+    <Property Name="ICINSSOCNO" Type="char" MaxLength="1" />
+    <Property Name="SOCSOINIT" Type="char" MaxLength="5" />
+    <Property Name="MUSTPR_SOC" Type="char" MaxLength="1" />
+    <Property Name="SOASONO" Type="char" MaxLength="15" />
+    <Property Name="SOASOTBL" Type="char" MaxLength="1" />
+    <Property Name="SOASOCAT" Type="char" MaxLength="1" />
+    <Property Name="SOBSONO" Type="char" MaxLength="15" />
+    <Property Name="SOBSOTBL" Type="char" MaxLength="1" />
+    <Property Name="SOBSOCAT" Type="char" MaxLength="1" />
+    <Property Name="SODSONO" Type="char" MaxLength="15" />
+    <Property Name="SODSOTBL" Type="char" MaxLength="1" />
+    <Property Name="SODSOCAT" Type="char" MaxLength="1" />
+    <Property Name="SOESONO" Type="char" MaxLength="15" />
+    <Property Name="SOESOTBL" Type="char" MaxLength="1" />
+    <Property Name="SOESOCAT" Type="char" MaxLength="1" />
+    <Property Name="UNIONNO" Type="char" MaxLength="15" />
+    <Property Name="UNIONTBL" Type="char" MaxLength="1" />
+    <Property Name="UNIONCAT" Type="char" MaxLength="1" />
+    <Property Name="UNEMPITBL" Type="char" MaxLength="1" />
+    <Property Name="MEDITBL" Type="char" MaxLength="1" />
+    <Property Name="ITAXNO" Type="char" MaxLength="20" />
+    <Property Name="ITAXNOKI" Type="char" MaxLength="1" />
+    <Property Name="ITAXTBL" Type="char" MaxLength="1" />
+    <Property Name="ITAXCAT" Type="char" MaxLength="1" />
+    <Property Name="CP8DGRP" Type="char" MaxLength="1" />
+    <Property Name="CP8DGRPI" Type="char" MaxLength="1" />
+    <Property Name="EMP_STATUS" Type="char" MaxLength="1" />
+    <Property Name="EMP_TYPE" Type="char" MaxLength="1" />
+    <Property Name="EA_GRP_SN" Type="char" MaxLength="12" />
+    <Property Name="EA_SN" Type="char" MaxLength="10" />
+    <Property Name="ITAXBRAN" Type="char" MaxLength="15" />
+    <Property Name="BANKCODE" Type="char" MaxLength="12" />
+    <Property Name="BRANCODE" Type="char" MaxLength="12" />
+    <Property Name="BANKACCNO" Type="char" MaxLength="20" />
+    <Property Name="BANKCAT" Type="char" MaxLength="2" />
+    <Property Name="BANKPMODE" Type="char" MaxLength="30" />
+    <Property Name="BRATE" Type="numeric" Precision="13" Scale="3" />
+    <Property Name="BRATE_LM" Type="numeric" Precision="13" Scale="3" />
+    <Property Name="INC_AMT" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="INC_DATE" Type="datetime" />
+    <Property Name="M_INC_AMT" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="M_INC_DATE" Type="datetime" />
+    <Property Name="PAYRTYPE" Type="char" MaxLength="1" />
+    <Property Name="PAYMETH" Type="char" MaxLength="1" />
+    <Property Name="PAYSTATUS" Type="char" MaxLength="1" />
+    <Property Name="CONFID" Type="char" MaxLength="1" />
+    <Property Name="CONTRACT" Type="char" MaxLength="1" />
+    <Property Name="CONTRACT_F" Type="datetime" />
+    <Property Name="CONTRACT_T" Type="datetime" />
+    <Property Name="DBAW101" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="DBAW102" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="DBAW103" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="DBAW104" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="DBAW105" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="DBAW106" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="DBAW107" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="DBAW108" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="DBAW109" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="DBAW110" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="DBAW111" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="DBAW112" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="DBAW113" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="DBAW114" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="DBAW115" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="DBAW116" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="DBAW117" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="DBDED101" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="DBDED102" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="DBDED103" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="DBDED104" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="DBDED105" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="DBDED106" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="DBDED107" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="DBDED108" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="DBDED109" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="DBDED110" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="DBDED111" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="DBDED112" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="DBDED113" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="DBDED114" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="DBDED115" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="SHIFTTBL" Type="char" MaxLength="1" />
+    <Property Name="ALBF" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="ALALL" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="ALADJ" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="ALCLA" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="LVETOCASH" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="MCALL" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="ALMCTBL" Type="char" MaxLength="1" />
+    <Property Name="MFUNDALL" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="DFUNDALL" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="NOADVDAY" Type="numeric" Precision="8" Scale="2" />
+    <Property Name="EPF1HD" Type="char" MaxLength="1" />
+    <Property Name="EPFBYER" Type="char" MaxLength="1" />
+    <Property Name="EPG1HD" Type="char" MaxLength="1" />
+    <Property Name="EPGBYER" Type="char" MaxLength="1" />
+    <Property Name="SOCSO1HD" Type="char" MaxLength="1" />
+    <Property Name="SOASOBYER" Type="char" MaxLength="1" />
+    <Property Name="SOBSOBYER" Type="char" MaxLength="1" />
+    <Property Name="SOCSOBYER" Type="char" MaxLength="1" />
+    <Property Name="SODSOBYER" Type="char" MaxLength="1" />
+    <Property Name="SOESOBYER" Type="char" MaxLength="1" />
+    <Property Name="UNIONBYER" Type="char" MaxLength="1" />
+    <Property Name="PCB1HD" Type="char" MaxLength="1" />
+    <Property Name="SOASO1HD" Type="char" MaxLength="1" />
+    <Property Name="SOBSO1HD" Type="char" MaxLength="1" />
+    <Property Name="SODSO1HD" Type="char" MaxLength="1" />
+    <Property Name="SOESO1HD" Type="char" MaxLength="1" />
+    <Property Name="UNION1HD" Type="char" MaxLength="1" />
+    <Property Name="STAT11HD" Type="char" MaxLength="1" />
+    <Property Name="EPFBRINSBP" Type="char" MaxLength="1" />
+    <Property Name="WITHPCB" Type="char" MaxLength="1" />
+    <Property Name="WITHBOPCB" Type="char" MaxLength="1" />
+    <Property Name="WITHCOPCB" Type="char" MaxLength="1" />
+    <Property Name="WITHHRDF" Type="char" MaxLength="1" />
+    <Property Name="PCBBYER" Type="char" MaxLength="1" />
+    <Property Name="NM_PCB" Type="int" />
+    <Property Name="PBONUS_MTH" Type="int" />
+    <Property Name="OTCODE" Type="char" MaxLength="1" />
+    <Property Name="WHTBL" Type="char" MaxLength="1" />
+    <Property Name="OTTBL" Type="char" MaxLength="1" />
+    <Property Name="OT_MAXPAY" Type="char" MaxLength="1" />
+    <Property Name="EPFIC" Type="char" MaxLength="1" />
+    <Property Name="NPPM" Type="int" />
+    <Property Name="WEEKPAY" Type="char" MaxLength="1" />
+    <Property Name="OTRATERC" Type="char" MaxLength="2" />
+    <Property Name="HRP_BRATE" Type="numeric" Precision="13" Scale="4" />
+    <Property Name="HRP_LM" Type="numeric" Precision="13" Scale="4" />
+    <Property Name="HRP_TM" Type="numeric" Precision="13" Scale="4" />
+    <Property Name="ORP_LM" Type="numeric" Precision="13" Scale="4" />
+    <Property Name="ORP_TM" Type="numeric" Precision="13" Scale="4" />
+    <Property Name="DAYPMTH" Type="numeric" Precision="5" Scale="2" />
+    <Property Name="DEDMEM111" Type="char" MaxLength="20" />
+    <Property Name="DEDMEM112" Type="char" MaxLength="20" />
+    <Property Name="DEDMEM113" Type="char" MaxLength="20" />
+    <Property Name="DEDMEM114" Type="char" MaxLength="20" />
+    <Property Name="DEDMEM115" Type="char" MaxLength="20" />
+    <Property Name="TEMPFIG1" Type="numeric" Precision="14" Scale="2" />
+    <Property Name="TEMPFIG2" Type="numeric" Precision="14" Scale="2" />
+    <Property Name="TEMPFIG3" Type="numeric" Precision="14" Scale="2" />
+    <Property Name="TEMPFIG4" Type="numeric" Precision="14" Scale="2" />
+    <Property Name="LY_D_TXAMT" Type="numeric" Precision="15" Scale="2" />
+    <Property Name="LY_D_EPF" Type="numeric" Precision="15" Scale="2" />
+    <Property Name="TEMPSTR1" Type="char" MaxLength="30" />
+    <Property Name="PRN_EA" Type="char" MaxLength="1" />
+    <Property Name="PRN_IR8S" Type="char" MaxLength="1" />
+    <Property Name="REMARK" Type="char" MaxLength="100" />
+    <Property Name="PHOTODIR" Type="char" MaxLength="1" />
+    <Property Name="PHOTO" Type="varchar(max)" />
+    <Property Name="BONUS" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="BONUSTOLY" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="BONUSFRNY" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="COMM" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="EXTRA" Type="numeric" Precision="12" Scale="2" />
+    <Property Name="BANKIC" Type="char" MaxLength="1" />
+    <Property Name="WORKGRPID" Type="char" MaxLength="8" />
+    <Property Name="RESTWKDAY" Type="int" />
+    <Property Name="BADGENO" Type="char" MaxLength="10" />
+    <Property Name="PHONE2" Type="char" MaxLength="24" />
+    <Property Name="EMAIL" Type="char" MaxLength="50" />
+    <Property Name="JOBCODE" Type="char" MaxLength="4" />
+    <Property Name="DEPTCODE" Type="char" MaxLength="10" />
+    <Property Name="RELCODE" Type="char" MaxLength="2" />
+    <Property Name="TRANCODE" Type="char" MaxLength="2" />
+    <Property Name="JSTACODE" Type="char" MaxLength="2" />
+    <Property Name="BRCODE" Type="char" MaxLength="4" />
+    <Property Name="DPASSPORT" Type="datetime" />
+    <Property Name="EMERPHONE" Type="char" MaxLength="24" />
+    <Property Name="EMERRSHIP" Type="char" MaxLength="15" />
+    <Property Name="JFUNCTION" Type="char" MaxLength="1" />
+    <Property Name="LSCHMCODE" Type="char" MaxLength="4" />
+    <Property Name="CSCHMCODE" Type="char" MaxLength="4" />
+    <Property Name="DATEENTER" Type="datetime" />
+    <Property Name="KEYUSER" Type="char" MaxLength="6" />
+    <Property Name="ALBAL" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="MCBAL" Type="numeric" Precision="6" Scale="2" />
+    <Property Name="FINNO" Type="char" MaxLength="21" />
+    <Property Name="CREATED_ON" Type="datetime" />
+    <Property Name="UPDATED_ON" Type="datetime" />
+    <Property Name="SU" Type="bit" />
+    <Property Name="DU" Type="bit" />
+    <Property Name="ADDRTYPE" Type="char" MaxLength="1" />
+    <Property Name="DIRFSET" Type="char" MaxLength="1" />
+    <Property Name="COUNTRYC" Type="char" MaxLength="2" />
+    <Property Name="PR_RATE" Type="char" MaxLength="2" />
+    <Property Name="MEPS" Type="char" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK_family_pmast">
+    <End Role="pmast" Type="Self.pmast" Multiplicity="1" />
+    <End Role="family" Type="Self.family" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pmast">
+        <PropertyRef Name="EMPNO" />
+      </Principal>
+      <Dependent Role="family">
+        <PropertyRef Name="EMPNO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="bcckModelStoreContainer">
+    <EntitySet Name="family" EntityType="Self.family" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pmast" EntityType="Self.pmast" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_family_pmast" Association="Self.FK_family_pmast">
+      <End Role="pmast" EntitySet="pmast" />
+      <End Role="family" EntitySet="family" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
