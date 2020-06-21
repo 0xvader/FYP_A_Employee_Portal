@@ -1,0 +1,59 @@
+﻿@model  AdminPanel4.Models.pmast
+
+@{
+    Layout = null;
+}
+
+
+@using (Html.BeginForm("EditOnly", "Employee", FormMethod.Post, new { onsubmit = "return SubmitForm(this)" }))
+{
+
+
+    @Html.HiddenFor(model => model.EMPNO)
+
+
+
+
+
+    <!--
+    <div class="form-group">
+        @Html.LabelFor(model => model.EMPNO, new { @class = "control-label" })
+        @Html.EditorFor(model => model.EMPNO, new { HtmlTextWriterAttribute = new { @class = "form-control" } })
+    </div>-->
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.EMP_CODE, new { @class = "control-label" })
+        @Html.EditorFor(model => model.EMP_CODE, new { HtmlTextWriterAttribute = new { @class = "form-control" } })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.NAME, new { @class = "control-label" })
+        @Html.EditorFor(model => model.NAME, new { HtmlTextWriterAttribute = new { @class = "form-control" } })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.INAME, new { @class = "control-label" })
+        @Html.EditorFor(model => model.INAME, new { HtmlTextWriterAttribute = new { @class = "form-control" } })
+    </div>
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.PASSPORT, new { @class = "control-label" })
+        @Html.EditorFor(model => model.PASSPORT, new { HtmlTextWriterAttribute = new { @class = "form-control" } })
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Submit" class="btn btn-primary" />
+        <input type="reset" value="Reset" class="btn btn-warning" />
+    </div>
+
+
+
+
+
+
+
+
+
+}
