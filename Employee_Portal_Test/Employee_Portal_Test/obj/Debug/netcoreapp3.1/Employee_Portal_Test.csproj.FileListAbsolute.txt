@@ -395,3 +395,12 @@ C:\Users\sevqu\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\Emplo
 C:\Users\sevqu\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\Employee_Portal_Test\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Dashboard4.cshtml.g.cs
 C:\Users\sevqu\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\Employee_Portal_Test\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\View.cshtml.g.cs
 C:\Users\sevqu\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\Employee_Portal_Test\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\View1.cshtml.g.cs
+C:\Users\alexh\OneDrive\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\Employee_Portal_Test\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\alexh\OneDrive\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\Employee_Portal_Test\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\alexh\OneDrive\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\Employee_Portal_Test\obj\Debug\netcoreapp3.1\Razor\Views\admin1.cshtml.g.cs
+C:\Users\alexh\OneDrive\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\Employee_Portal_Test\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Dashboard1.cshtml.g.cs
+C:\Users\alexh\OneDrive\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\Employee_Portal_Test\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Dashboard2.cshtml.g.cs
+C:\Users\alexh\OneDrive\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\Employee_Portal_Test\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Dashboard3.cshtml.g.cs
+C:\Users\alexh\OneDrive\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\Employee_Portal_Test\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Dashboard4.cshtml.g.cs
+C:\Users\alexh\OneDrive\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\Employee_Portal_Test\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\View.cshtml.g.cs
+C:\Users\alexh\OneDrive\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\Employee_Portal_Test\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\View1.cshtml.g.cs
