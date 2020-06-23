@@ -811,3 +811,5 @@ C:\Users\Mun yoo min\Desktop\Employee_Portal_Test\Employee_Portal_Test\obj\Debug
 C:\Users\Mun yoo min\Desktop\Employee_Portal_Test\Employee_Portal_Test\obj\Debug\netcoreapp3.1\Employee_Portal_Test.pdb
 C:\Users\Mun yoo min\Desktop\Employee_Portal_Test\Employee_Portal_Test\obj\Debug\netcoreapp3.1\Employee_Portal_Test.genruntimeconfig.cache
 C:\Users\Mun yoo min\Desktop\Employee_Portal_Test\Employee_Portal_Test\obj\Debug\netcoreapp3.1\Razor\Views\Admin\index.cshtml.g.cs
+C:\Users\Mun yoo min\Desktop\Employee_Portal_Test\Employee_Portal_Test\obj\Debug\netcoreapp3.1\Razor\Views\Role\Create.cshtml.g.cs
+C:\Users\Mun yoo min\Desktop\Employee_Portal_Test\Employee_Portal_Test\obj\Debug\netcoreapp3.1\Razor\Views\Role\Index.cshtml.g.cs

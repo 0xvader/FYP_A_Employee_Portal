@@ -50,8 +50,8 @@ namespace Employee_Portal_Test.Areas.Identity.Pages.Account
         {
             [Required]
             [DataType(DataType.Text)]
-            [Display(Name = "Name")]
-            public string Name { get; set; }
+            [Display(Name = "Employee Name")]
+            public string Empname { get; set; }
 
             [Required]
             [DataType(DataType.Text)]
@@ -87,10 +87,10 @@ namespace Employee_Portal_Test.Areas.Identity.Pages.Account
         {
             returnUrl = returnUrl ?? Url.Content("~/");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
-            var role = _roleManager.FindByEmpnoAsync(Input.Name).Result;
+            var role = _roleManager.FindByIdAsync(Input.Name).Result;
             if (ModelState.IsValid)
             {
-                var user = new Employee_Portal_TestUser { UserName = Input.Email, Email = Input.Email, Name = Input.Name, Empno = Input.Empno  };
+                var user = new Employee_Portal_TestUser { UserName = Input.Email, Email = Input.Email, Empno = Input.Empno, Empname = Input.Empname };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {

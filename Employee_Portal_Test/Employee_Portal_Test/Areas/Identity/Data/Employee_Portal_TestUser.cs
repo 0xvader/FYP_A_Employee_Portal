@@ -12,7 +12,7 @@ namespace Employee_Portal_Test.Areas.Identity.Data
     {
         [PersonalData]
         [Column(TypeName = "varchar(100)")]
-        public string Name { get; set; }
+        public string Empname { get; set; }
         
         
         [PersonalData]

@@ -4,14 +4,16 @@ using Employee_Portal_Test.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Employee_Portal_Test.Migrations.Employee_Portal_TestDb
 {
     [DbContext(typeof(Employee_Portal_TestDbContext))]
-    partial class Employee_Portal_TestDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200623070923_AddRolesTable")]
+    partial class AddRolesTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -38,9 +40,6 @@ namespace Employee_Portal_Test.Migrations.Employee_Portal_TestDb
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
-                    b.Property<string>("Empname")
-                        .HasColumnType("varchar(100)");
-
                     b.Property<string>("Empno")
                         .HasColumnType("varchar(6)");
 
@@ -49,6 +48,9 @@ namespace Employee_Portal_Test.Migrations.Employee_Portal_TestDb
 
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("varchar(100)");
 
                     b.Property<string>("NormalizedEmail")
                         .HasColumnType("nvarchar(256)")
