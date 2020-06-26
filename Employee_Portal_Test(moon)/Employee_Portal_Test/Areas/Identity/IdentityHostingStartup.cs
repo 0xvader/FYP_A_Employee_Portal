@@ -25,7 +25,7 @@ namespace Employee_Portal_Test.Areas.Identity
                  
                 services.AddDefaultIdentity<Employee_Portal_TestUser>(options =>
                 {
-                    options.SignIn.RequireConfirmedAccount = true;//true
+                    options.SignIn.RequireConfirmedAccount = false;//true
                     options.Password.RequireLowercase = false;
                     options.Password.RequireUppercase = false;
                 })
