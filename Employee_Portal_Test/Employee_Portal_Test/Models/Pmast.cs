@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Employee_Portal_Test.Models
 {
@@ -8,8 +9,7 @@ namespace Employee_Portal_Test.Models
         public Pmast()
         {
             Family = new HashSet<Family>();
-        }
-
+        }     
         public string Empno { get; set; }
         public string EmpCode { get; set; }
         public string Name { get; set; }
