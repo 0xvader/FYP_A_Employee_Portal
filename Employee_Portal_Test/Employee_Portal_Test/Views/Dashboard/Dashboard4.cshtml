@@ -1,0 +1,1553 @@
+﻿@model IEnumerable<Employee_Portal_Test.Models.Pmast>
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<h1>View</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Iname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Add1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Add2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Postcode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Town)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.State)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nric)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nricn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Iccolor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.National)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Passport)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mstatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mstatusod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Race)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BPutra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Edu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Exp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Snric)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sitbranch)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Iskerja)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TxDedSp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumChild)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Numchild1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nochild)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Econtact)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Etelno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Eadd1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Eadd2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Eadd3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Source)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Plineno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jtitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dcomm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dconfirm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dpromote)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dresign)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RStatu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrNum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrFrom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Imigrano)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Wpermit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WpFrom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WpTo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Emppass)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fwlevytbl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fwlevymtd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fwlevyadj)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Epfno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Epfnk)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Epftbl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Epfcat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CpfCeili)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EpfFyee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EpfFyer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Epgno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Epgtbl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Epgcat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Socsono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Socsotbl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Socsocat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Socsoic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Icinssocno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Socsoinit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MustprSoc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Soasono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Soasotbl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Soasocat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sobsono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sobsotbl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sobsocat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sodsono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sodsotbl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sodsocat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Soesono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Soesotbl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Soesocat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Unionno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Uniontbl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Unioncat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Unempitbl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Meditbl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Itaxno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Itaxnoki)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Itaxtbl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Itaxcat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cp8dgrp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cp8dgrpi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EaGrpSn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EaSn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Itaxbran)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bankcode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Brancode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bankaccno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bankcat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bankpmode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Brate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BrateLm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IncAmt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IncDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MIncAmt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MIncDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Payrtype)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Paymeth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Paystatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Confid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contract)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContractF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContractT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbaw101)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbaw102)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbaw103)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbaw104)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbaw105)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbaw106)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbaw107)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbaw108)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbaw109)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbaw110)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbaw111)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbaw112)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbaw113)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbaw114)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbaw115)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbaw116)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbaw117)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbded101)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbded102)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbded103)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbded104)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbded105)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbded106)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbded107)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbded108)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbded109)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbded110)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbded111)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbded112)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbded113)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbded114)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dbded115)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shifttbl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Albf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Alall)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Aladj)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Alcla)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lvetocash)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mcall)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Almctbl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mfundall)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dfundall)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Noadvday)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Epf1hd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Epfbyer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Epg1hd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Epgbyer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Socso1hd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Soasobyer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sobsobyer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Socsobyer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sodsobyer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Soesobyer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Unionbyer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pcb1hd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Soaso1hd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sobso1hd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sodso1hd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Soeso1hd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Union1hd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stat11hd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Epfbrinsbp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Withpcb)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Withbopcb)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Withcopcb)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Withhrdf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pcbbyer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NmPcb)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PbonusMth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Otcode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Whtbl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ottbl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OtMaxpay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Epfic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nppm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Weekpay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Otraterc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HrpBrate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HrpLm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HrpTm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrpLm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrpTm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Daypmth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dedmem111)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dedmem112)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dedmem113)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dedmem114)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dedmem115)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tempfig1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tempfig2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tempfig3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tempfig4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LyDTxamt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LyDEpf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tempstr1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrnEa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrnIr8s)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Remark)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Photodir)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Photo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bonus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bonustoly)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bonusfrny)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Extra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bankic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Workgrpid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Restwkday)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Badgeno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jobcode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Deptcode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Relcode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Trancode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jstacode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Brcode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dpassport)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Emerphone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Emerrship)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Jfunction)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lschmcode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cschmcode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dateenter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Keyuser)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Albal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mcbal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Finno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UpdatedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Su)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Du)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Addrtype)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dirfset)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Countryc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrRate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Meps)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Iname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Add1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Add2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Postcode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Town)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nric)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nricn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Iccolor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.National)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Passport)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mstatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mstatusod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Race)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BPutra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Edu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Exp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Snric)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sitbranch)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Iskerja)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TxDedSp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumChild)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numchild1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nochild)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Econtact)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Etelno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Eadd1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Eadd2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Eadd3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Source)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Plineno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Jtitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dcomm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dconfirm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dpromote)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dresign)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RStatu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrFrom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Imigrano)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Wpermit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WpFrom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WpTo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emppass)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fwlevytbl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fwlevymtd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fwlevyadj)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Epfno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Epfnk)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Epftbl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Epfcat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CpfCeili)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EpfFyee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EpfFyer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Epgno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Epgtbl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Epgcat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Socsono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Socsotbl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Socsocat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Socsoic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Icinssocno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Socsoinit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MustprSoc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Soasono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Soasotbl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Soasocat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sobsono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sobsotbl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sobsocat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sodsono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sodsotbl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sodsocat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Soesono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Soesotbl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Soesocat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Unionno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Uniontbl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Unioncat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Unempitbl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Meditbl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Itaxno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Itaxnoki)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Itaxtbl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Itaxcat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cp8dgrp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cp8dgrpi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EaGrpSn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EaSn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Itaxbran)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bankcode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brancode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bankaccno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bankcat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bankpmode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrateLm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IncAmt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IncDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MIncAmt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MIncDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Payrtype)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Paymeth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Paystatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Confid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contract)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContractF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContractT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbaw101)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbaw102)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbaw103)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbaw104)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbaw105)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbaw106)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbaw107)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbaw108)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbaw109)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbaw110)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbaw111)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbaw112)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbaw113)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbaw114)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbaw115)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbaw116)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbaw117)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbded101)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbded102)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbded103)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbded104)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbded105)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbded106)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbded107)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbded108)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbded109)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbded110)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbded111)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbded112)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbded113)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbded114)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dbded115)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Shifttbl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Albf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Alall)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Aladj)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Alcla)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lvetocash)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mcall)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Almctbl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mfundall)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dfundall)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Noadvday)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Epf1hd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Epfbyer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Epg1hd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Epgbyer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Socso1hd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Soasobyer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sobsobyer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Socsobyer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sodsobyer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Soesobyer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Unionbyer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pcb1hd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Soaso1hd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sobso1hd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sodso1hd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Soeso1hd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Union1hd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stat11hd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Epfbrinsbp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Withpcb)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Withbopcb)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Withcopcb)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Withhrdf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pcbbyer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NmPcb)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PbonusMth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Otcode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Whtbl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ottbl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OtMaxpay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Epfic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nppm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weekpay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Otraterc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HrpBrate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HrpLm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HrpTm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrpLm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrpTm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Daypmth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dedmem111)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dedmem112)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dedmem113)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dedmem114)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dedmem115)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tempfig1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tempfig2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tempfig3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tempfig4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LyDTxamt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LyDEpf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tempstr1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrnEa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrnIr8s)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Remark)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Photodir)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Photo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bonus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bonustoly)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bonusfrny)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Extra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bankic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Workgrpid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Restwkday)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Badgeno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Jobcode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Deptcode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Relcode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Trancode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Jstacode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brcode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dpassport)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emerphone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emerrship)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Jfunction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lschmcode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cschmcode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dateenter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Keyuser)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Albal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mcbal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Finno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedOn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Su)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Du)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Addrtype)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dirfset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Countryc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Meps)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Empno">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Empno">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Empno">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

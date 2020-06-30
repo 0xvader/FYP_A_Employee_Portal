@@ -18,9 +18,5 @@ namespace Employee_Portal_Test.Areas.Identity.Data
         [PersonalData]
         [Column(TypeName = "varchar(6)")]
         public string Empno { get; set; }
-
-        [PersonalData]
-        [Column(TypeName = "varchar(30)")]
-        public string Dept { get; set; }
     }
 }

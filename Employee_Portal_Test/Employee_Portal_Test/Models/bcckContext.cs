@@ -18,7 +18,6 @@ namespace Employee_Portal_Test.Models
         public virtual DbSet<Family> Family { get; set; }
         public virtual DbSet<Pmast> Pmast { get; set; }
 
-      
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -89,7 +88,6 @@ namespace Employee_Portal_Test.Models
                     .HasMaxLength(50)
                     .IsUnicode(false)
                     .IsFixedLength();
-                  
 
                 entity.Property(e => e.Add2)
                     .HasColumnName("ADD2")
