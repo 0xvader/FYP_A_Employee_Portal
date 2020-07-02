@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mun yoo min\\Desktop\\Employee_Portal_Test\\Employee_Portal_Test\\Employee_Portal_Test.csproj": {}
+    "C:\\Users\\sevqu\\Desktop\\중요2\\발구지\\Employee_Portal_Test\\Employee_Portal_Test\\Employee_Portal_Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mun yoo min\\Desktop\\Employee_Portal_Test\\Employee_Portal_Test\\Employee_Portal_Test.csproj": {
+    "C:\\Users\\sevqu\\Desktop\\중요2\\발구지\\Employee_Portal_Test\\Employee_Portal_Test\\Employee_Portal_Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mun yoo min\\Desktop\\Employee_Portal_Test\\Employee_Portal_Test\\Employee_Portal_Test.csproj",
+        "projectUniqueName": "C:\\Users\\sevqu\\Desktop\\중요2\\발구지\\Employee_Portal_Test\\Employee_Portal_Test\\Employee_Portal_Test.csproj",
         "projectName": "Employee_Portal_Test",
-        "projectPath": "C:\\Users\\Mun yoo min\\Desktop\\Employee_Portal_Test\\Employee_Portal_Test\\Employee_Portal_Test.csproj",
-        "packagesPath": "C:\\Users\\Mun yoo min\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mun yoo min\\Desktop\\Employee_Portal_Test\\Employee_Portal_Test\\obj\\",
+        "projectPath": "C:\\Users\\sevqu\\Desktop\\중요2\\발구지\\Employee_Portal_Test\\Employee_Portal_Test\\Employee_Portal_Test.csproj",
+        "packagesPath": "C:\\Users\\sevqu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sevqu\\Desktop\\중요2\\발구지\\Employee_Portal_Test\\Employee_Portal_Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Mun yoo min\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sevqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -66,6 +66,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.3, )"
+            },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.20, )"
             }
           },
           "imports": [
@@ -78,6 +82,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -86,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
