@@ -1,0 +1,141 @@
+﻿@model Employee_Portal_Test.Models.Pmast
+@{ ViewData["Title"] = "Create"; }
+
+
+<h4>Employee Form</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddOrEdit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <!--<input type="hidden" asp-for="Empno" />-->
+
+            <div class="form-group">
+                <label asp-for="Empno" class="control-label"></label>
+                <input asp-for="Empno" class="form-control" maxlength="6" required />
+                <span asp-validation-for="Empno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmpCode" class="control-label"></label>
+                <input asp-for="EmpCode" class="form-control" maxlength="12" required />
+                <span asp-validation-for="EmpCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" maxlength="50" required />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Iname" class="control-label"></label>
+                <input asp-for="Iname" class="form-control" maxlength="3" required />
+                <span asp-validation-for="Iname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Add1" class="control-label"></label>
+                <input asp-for="Add1" class="form-control" maxlength="50" required />
+                <span asp-validation-for="Add1" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Add2" class="control-label"></label>
+                <input asp-for="Add2" class="form-control" maxlength="50" required />
+                <span asp-validation-for="Add2" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Dbirth" class="control-label"></label>
+                <input asp-for="Dbirth" class="form-control" required />
+                <span asp-validation-for="Dbirth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nric" class="control-label"></label>
+                <input asp-for="Nric" class="form-control" maxlength="15" required />
+                <span asp-validation-for="Nric" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Passport" class="control-label"></label>
+                <input asp-for="Passport" class="form-control" maxlength="12" required />
+                <span asp-validation-for="Passport" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" class="form-control" maxlength="24" required />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone2" class="control-label"></label>
+                <input asp-for="Phone2" class="form-control" maxlength="24" required />
+                <span asp-validation-for="Phone2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mstatus" class="control-label"></label>
+                <input asp-for="Mstatus" class="form-control" maxlength="15" required />
+                <span asp-validation-for="Mstatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="National" class="control-label"></label>
+                <input asp-for="National" class="form-control" maxlength="2" required />
+                <span asp-validation-for="National" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Race" class="control-label"></label>
+                <input asp-for="Race" class="form-control" maxlength="1" required />
+                <span asp-validation-for="Race" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Relcode" class="control-label"></label>
+                <input asp-for="Relcode" class="form-control" maxlength="2" required />
+                <span asp-validation-for="Relcode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Itaxno" class="control-label"></label>
+                <input asp-for="Itaxno" class="form-control" maxlength="20" required />
+                <span asp-validation-for="Itaxno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Epfno" class="control-label"></label>
+                <input asp-for="Epfno" class="form-control" maxlength="12" required />
+                <span asp-validation-for="Epfno" class="text-danger"></span>
+            </div>            <div class="form-group">
+                <label asp-for="Bankcode" class="control-label"></label>
+                <input asp-for="Bankcode" class="form-control" maxlength="12" required />
+                <span asp-validation-for="Bankcode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bankaccno" class="control-label"></label>
+                <input asp-for="Bankaccno" class="form-control" maxlength="20" required />
+                <span asp-validation-for="Bankaccno" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Bankaccno" class="control-label"></label>
+                <input asp-for="Bankaccno" class="form-control" maxlength="20" required />
+                <span asp-validation-for="Bankaccno" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Deptcode" class="control-label"></label>
+                <input asp-for="Deptcode" class="form-control" maxlength="10" required />
+                <span asp-validation-for="Deptcode" class="text-danger"></span>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="submit" value="Submit" class="btn btn-primary btn-block" />
+                </div>
+                <div class="form-group col-md-6">
+                    <a asp-action="Index" class="btn btn-secondary btn-block"><i class="fa fa-table"></i> Back to List</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
