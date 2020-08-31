@@ -280,7 +280,7 @@ namespace WindowsFormsApp1
             //connection to mssql family
             using (var sqlConn1 = new SqlConnection("Data Source = (local)\\sqlexpress; Initial Catalog = bcck1; Integrated Security = True"))
             {
-                using (SqlCommand sqlCmd1 = new SqlCommand("select MEMNAME,NRICNO,SEX,DATEBIRTH,EMPNO from family", sqlConn1))
+                using (SqlCommand sqlCmd1 = new SqlCommand("select MEMNAME,NRICNO,SEX,EMPNO from family", sqlConn1))
                 {
                     sqlConn1.Open();
 
@@ -336,12 +336,12 @@ namespace WindowsFormsApp1
             string sql=null;
 
             MyConnection = new System.Data.OleDb.OleDbConnection("Provider = VFPOLEDB.1; Data Source = C:\\Users\\Mun yoo min\\Desktop\\ubs94file");
-            MyConnection1 = new System.Data.SqlClient.SqlConnection("Data Source=(local)\\sqlexpress;Initial Catalog=bcck1;Integrated Security=True");
+            MyConnection1 = new System.Data.SqlClient.SqlConnection("Data Source=(local)\\sqlexpress;Initial Catalog=bcck;Integrated Security=True");
             MyConnection.Open();
             MyConnection1.Open();
             MyCommand.Connection = MyConnection;
             MyCommand1.Connection = MyConnection1;
-            sql = "update family set memname = 'address12' where empno = '01'";
+            sql = "update family set memname = 'wrongname' where empno = '01'";
 
             MyCommand.CommandText = sql;
             MyCommand.ExecuteNonQuery();

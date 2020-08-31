@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data.OleDb;
 using System.Linq;
 using System.Threading.Tasks;
 using Employee_Portal_Test.Models;
@@ -19,6 +20,7 @@ namespace Employee_Portal_Test
 {
     public class Startup
     {
+    
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -29,7 +31,7 @@ namespace Employee_Portal_Test
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddSession();
@@ -44,6 +46,7 @@ namespace Employee_Portal_Test
             services.AddSingleton<ITempDataProvider, CookieTempDataProvider>();
             services.AddDbContext<bcckContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("Employee_Portal_TestDbContextConnection")));
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -67,7 +70,7 @@ namespace Employee_Portal_Test
 
             app.UseAuthentication();
             app.UseAuthorization();
-
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

@@ -8,3 +8,13 @@ C:\Users\Mun yoo min\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Wi
 C:\Users\Mun yoo min\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 C:\Users\Mun yoo min\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\Mun yoo min\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Mun yoo min\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test(moon)\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Mun yoo min\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test(moon)\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Mun yoo min\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test(moon)\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Mun yoo min\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test(moon)\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\Mun yoo min\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test(moon)\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\Mun yoo min\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test(moon)\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Mun yoo min\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test(moon)\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\Mun yoo min\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test(moon)\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\Mun yoo min\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test(moon)\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Mun yoo min\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test(moon)\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
