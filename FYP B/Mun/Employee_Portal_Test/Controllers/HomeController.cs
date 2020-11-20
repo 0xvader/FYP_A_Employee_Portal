@@ -77,7 +77,7 @@ namespace Employee_Portal_Test.Controllers
                 var saveimg = Path.Combine(_iwebhost.WebRootPath, "Docimg", ifile.FileName);
                 var stream = new FileStream(saveimg, FileMode.Create);
                 await ifile.CopyToAsync(stream);
-                ic.Empno2 = ifile.FileName;
+                ic.title = ifile.FileName;
                 ic.docpath = saveimg;
                 ic.EMPNO = user.Empno;
                 await _context.document.AddAsync(ic);

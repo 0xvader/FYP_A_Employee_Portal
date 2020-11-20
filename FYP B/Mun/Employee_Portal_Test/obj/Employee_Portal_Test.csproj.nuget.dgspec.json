@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mun yoo min\\Documents\\GitHub\\FYP_A_Employee_Portal\\Employee_Portal_Test\\Employee_Portal_Test\\Employee_Portal_Test.csproj": {}
+    "C:\\Users\\Mun yoo min\\Documents\\GitHub\\FYP_A_Employee_Portal\\FYP B\\Mun\\Employee_Portal_Test\\Employee_Portal_Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mun yoo min\\Documents\\GitHub\\FYP_A_Employee_Portal\\Employee_Portal_Test\\Employee_Portal_Test\\Employee_Portal_Test.csproj": {
+    "C:\\Users\\Mun yoo min\\Documents\\GitHub\\FYP_A_Employee_Portal\\FYP B\\Mun\\Employee_Portal_Test\\Employee_Portal_Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mun yoo min\\Documents\\GitHub\\FYP_A_Employee_Portal\\Employee_Portal_Test\\Employee_Portal_Test\\Employee_Portal_Test.csproj",
+        "projectUniqueName": "C:\\Users\\Mun yoo min\\Documents\\GitHub\\FYP_A_Employee_Portal\\FYP B\\Mun\\Employee_Portal_Test\\Employee_Portal_Test.csproj",
         "projectName": "Employee_Portal_Test",
-        "projectPath": "C:\\Users\\Mun yoo min\\Documents\\GitHub\\FYP_A_Employee_Portal\\Employee_Portal_Test\\Employee_Portal_Test\\Employee_Portal_Test.csproj",
+        "projectPath": "C:\\Users\\Mun yoo min\\Documents\\GitHub\\FYP_A_Employee_Portal\\FYP B\\Mun\\Employee_Portal_Test\\Employee_Portal_Test.csproj",
         "packagesPath": "C:\\Users\\Mun yoo min\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mun yoo min\\Documents\\GitHub\\FYP_A_Employee_Portal\\Employee_Portal_Test\\Employee_Portal_Test\\obj\\",
+        "outputPath": "C:\\Users\\Mun yoo min\\Documents\\GitHub\\FYP_A_Employee_Portal\\FYP B\\Mun\\Employee_Portal_Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

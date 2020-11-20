@@ -11,7 +11,7 @@ namespace Employee_Portal_Test.Models
         [Key]
         public int docID { get; set; }
 
-        public string Empno2 { get; set; }
+        public string title{ get; set; }
         public string docpath { get; set; }
 
         public string EMPNO { get; set; }
