@@ -3,7 +3,7 @@
 *@
 
 @model Employee_Portal_Test.Models.Pmast
-<!doctype html>
+t<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -22,9 +22,9 @@
 
 
     <div class="container-fluid">
-        
-            <!-- Main Sidebar -->
-            @*<aside class="main-sidebar col-12 col-md-3 col-lg-2 px-0">
+
+        <!-- Main Sidebar -->
+        @*<aside class="main-sidebar col-12 col-md-3 col-lg-2 px-0">
                 <div class="main-navbar">
                     <nav class="navbar align-items-stretch navbar-light bg-white flex-md-nowrap border-bottom p-0">
                         <a class="navbar-brand w-100 mr-0" href="@Url.Action("Index", "Home")" style="line-height: 25px;">
@@ -89,123 +89,123 @@
                     </ul>
                 </div>
             </aside>*@
-            <!-- End Main Sidebar -->
-            <main class="main-content col-lg-10 col-md-9 col-sm-12 p-0 offset-lg-2 offset-md-3">
-                
-                <!-- / .main-navbar -->
-                <div class="main-content-container container-fluid px-4">
-                    <!-- Page Header -->
-                    <div class="page-header row no-gutters py-4">
-                        <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
-                            <span class="text-uppercase page-subtitle">Overview</span>
-                            <h3 class="page-title">User Profile</h3>
-                        </div>
+        <!-- End Main Sidebar -->
+        <main class="main-content col-lg-10 col-md-9 col-sm-12 p-0 offset-lg-2 offset-md-3">
+
+            <!-- / .main-navbar -->
+            <div class="main-content-container container-fluid px-4">
+                <!-- Page Header -->
+                <div class="page-header row no-gutters py-4">
+                    <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+                        <span class="text-uppercase page-subtitle">Overview</span>
+                        <h3 class="page-title">User Profile</h3>
                     </div>
-                    <!-- End Page Header -->
-                    <!-- Default Light Table -->
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="card card-small mb-4 pt-3">
-                                <div class="card-header border-bottom text-center">
-                                    <div class="mb-3 mx-auto">
-                                        <img class="rounded-circle" src="~/images/avatars/4.jpg" alt="User Avatar" width="110">
-                                    </div>
-
-                                    <h4 class="mb-0">@Html.DisplayFor(model => model.Name)</h4>
-
-                                    <span class="text-muted d-block mb-2">
-                                        <a class="form-control-static">@Html.DisplayFor(model => model.Jobcode)</a>
-                                    </span>
+                </div>
+                <!-- End Page Header -->
+                <!-- Default Light Table -->
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card card-small mb-4 pt-3">
+                            <div class="card-header border-bottom text-center">
+                                <div class="mb-3 mx-auto">
+                                    <img class="rounded-circle" src="~/images/avatars/4.jpg" alt="User Avatar" width="110">
                                 </div>
-                                <ul class="list-group list-group-flush">
 
-                                    <li class="list-group-item p-4">
-                                        <strong class="text-muted d-block mb-2">Description</strong>
-                                        <span>
+                                <h4 class="mb-0">@Html.DisplayFor(model => model.Name)</h4>
 
-                                            <a class="form-control-static">@Html.DisplayFor(model => model.Deptcode)</a>
-                                        </span>
-                                    </li>
-                                </ul>
+                                <span class="text-muted d-block mb-2">
+                                    <a class="form-control-static">@Html.DisplayFor(model => model.Jobcode)</a>
+                                </span>
                             </div>
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="card card-small mb-4">
-                                <div class="card-header border-bottom">
-                                    <h6 class="m-0">Account Details</h6>
-                                </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item p-3">
+                            <ul class="list-group list-group-flush">
 
-                                        <form asp-action="Edit2">
-                                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                                            <input type="hidden" asp-for="Empno" />
-                                            <input type="hidden" asp-for="Name" />
-                                            <input type="hidden" asp-for="Iname" />
-                                            <input type="hidden" asp-for="EmpCode" />
-                                            <div class="form-group">
-                                                <label asp-for="Empno" class="control-label"></label>
-                                                <input asp-for="Empno" class="form-control" readonly />
-                                                <span asp-validation-for="Empno" class="text-danger"></span>
-                                            </div>
-                                            <div class="form-group">
-                                                <label asp-for="Name" class="control-label"></label>
-                                                <input asp-for="Name" class="form-control" readonly />
-                                                <span asp-validation-for="Name" class="text-danger"></span>
-                                            </div>
-                                            <div class="form-group">
-                                                <label asp-for="Iname" class="control-label"></label>
-                                                <input asp-for="Iname" class="form-control" readonly />
-                                                <span asp-validation-for="Iname" class="text-danger"></span>
-                                            </div>
-                                            <div class="form-group">
-                                                <label asp-for="EmpCode" class="control-label"></label>
-                                                <input asp-for="EmpCode" class="form-control" readonly />
-                                                <span asp-validation-for="EmpCode" class="text-danger"></span>
-                                            </div>
-                                            <div class="form-group">
-                                                <label asp-for="Econtact" class="control-label"></label>
-                                                <input asp-for="Econtact" class="form-control" />
-                                                <span asp-validation-for="Econtact" class="text-danger"></span>
-                                            </div>
-                                            <div class="form-group">
-                                                <label asp-for="Etelno" class="control-label"></label>
-                                                <input asp-for="Etelno" class="form-control" />
-                                                <span asp-validation-for="Etelno" class="text-danger"></span>
-                                            </div>
-                                            <div class="form-group">
-                                                <label asp-for="Category" class="control-label"></label>
-                                                <input asp-for="Category" class="form-control" />
-                                                <span asp-validation-for="Category" class="text-danger"></span>
-                                            </div>
-                                            <div class="form-group">
-                                                <label asp-for="Sname" class="control-label"></label>
-                                                <input asp-for="Sname" class="form-control" />
-                                                <span asp-validation-for="Sname" class="text-danger"></span>
-                                            </div>
-                                            <div class="form-group">
-                                                <label asp-for="Snric" class="control-label"></label>
-                                                <input asp-for="Snric" class="form-control" />
-                                                <span asp-validation-for="Snric" class="text-danger"></span>
-                                            </div>
+                                <li class="list-group-item p-4">
+                                    <strong class="text-muted d-block mb-2">Description</strong>
+                                    <span>
 
-
-
-                                            <div class="form-group">
-                                                <input type="submit" value="Save" class="btn btn-primary" />
-                                            </div>
-                                        </form>
-                            </li>
+                                        <a class="form-control-static">@Html.DisplayFor(model => model.Deptcode)</a>
+                                    </span>
+                                </li>
                             </ul>
                         </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="card card-small mb-4">
+                            <div class="card-header border-bottom">
+                                <h6 class="m-0">Account Details</h6>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item p-3">
+
+                                    <form asp-action="Edit2">
+                                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                        <input type="hidden" asp-for="Empno" />
+                                        <input type="hidden" asp-for="Name" />
+                                        <input type="hidden" asp-for="Iname" />
+                                        <input type="hidden" asp-for="EmpCode" />
+                                        <div class="form-group">
+                                            <label asp-for="Empno" class="control-label"></label>
+                                            <input asp-for="Empno" class="form-control" readonly />
+                                            <span asp-validation-for="Empno" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Name" class="control-label"></label>
+                                            <input asp-for="Name" class="form-control" readonly />
+                                            <span asp-validation-for="Name" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Iname" class="control-label"></label>
+                                            <input asp-for="Iname" class="form-control" readonly />
+                                            <span asp-validation-for="Iname" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="EmpCode" class="control-label"></label>
+                                            <input asp-for="EmpCode" class="form-control" readonly />
+                                            <span asp-validation-for="EmpCode" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Econtact" class="control-label"></label>
+                                            <input asp-for="Econtact" class="form-control" />
+                                            <span asp-validation-for="Econtact" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Etelno" class="control-label"></label>
+                                            <input asp-for="Etelno" class="form-control" />
+                                            <span asp-validation-for="Etelno" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Category" class="control-label"></label>
+                                            <input asp-for="Category" class="form-control" />
+                                            <span asp-validation-for="Category" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Sname" class="control-label"></label>
+                                            <input asp-for="Sname" class="form-control" />
+                                            <span asp-validation-for="Sname" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label asp-for="Snric" class="control-label"></label>
+                                            <input asp-for="Snric" class="form-control" />
+                                            <span asp-validation-for="Snric" class="text-danger"></span>
+                                        </div>
+
+
+
+                                        <div class="form-group">
+                                            <input type="submit" value="Save" class="btn btn-primary" />
+                                        </div>
+                                    </form>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <!-- End Default Light Table -->
                 </div>
+                <!-- End Default Light Table -->
+            </div>
 
 
-            </main>
-        </div>
+        </main>
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

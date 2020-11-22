@@ -71,26 +71,28 @@ namespace Employee_Portal_Test.Controllers
         {
             var data = _userManager.GetUserId(HttpContext.User);
             Employee_Portal_TestUser user = _userManager.FindByIdAsync(data).Result;
-            string imgext = Path.GetExtension(ifile.FileName);
-            if (imgext == ".jpg" || imgext == ".jpeg" || imgext == ".png")
-            {
-                var saveimg = Path.Combine(_iwebhost.WebRootPath, "Docimg", ifile.FileName);
-                var stream = new FileStream(saveimg, FileMode.Create);
-                await ifile.CopyToAsync(stream);
-                ic.title = ifile.FileName;
-                ic.docpath = saveimg;
-                ic.EMPNO = user.Empno;
-                await _context.document.AddAsync(ic);
-                await _context.SaveChangesAsync();
-                ViewData["Message"] = "save successful";
-            }
-            else
-            {
-                ViewData["Message"] = "save failed, must be .jpg/.jpeg/.png";
-            }
-            return RedirectToAction("Index");
-        }
 
-    }
+            string imgext = Path.GetExtension(ifile.FileName);
+          
+             if (imgext == ".jpg" || imgext == ".jpeg" || imgext == ".png")
+                {
+                    var saveimg = Path.Combine(_iwebhost.WebRootPath, "Docimg", ifile.FileName);
+                    var stream = new FileStream(saveimg, FileMode.Create);
+                    await ifile.CopyToAsync(stream);
+                    ic.title = ifile.FileName;
+                    ic.docpath = saveimg;
+                    ic.EMPNO = user.Empno;
+                    await _context.document.AddAsync(ic);
+                    await _context.SaveChangesAsync();
+                    ViewData["Message"] = "save successful";
+                }
+                else
+                {
+                    ViewData["Message"] = "save failed, must be .jpg/.jpeg/.png";
+
+                }
+                return RedirectToAction("Index");
+            }
+        }
 }
 
