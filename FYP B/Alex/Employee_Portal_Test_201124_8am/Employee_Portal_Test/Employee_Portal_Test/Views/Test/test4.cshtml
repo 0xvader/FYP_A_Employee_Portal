@@ -1,0 +1,47 @@
+﻿
+@model IEnumerable<Employee_Portal_Test.Models.History>
+@{ ViewData["Title"] = "test4"; }
+
+<h4>Admin Panel</h4>
+<hr />
+
+
+<table id="Employeetable" class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                Function
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Empno)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    <a asp-action="test5" asp-route-id="@item.Id"> <i class="fa fa-marker fa-lg"></i></a>
+
+                    <a asp-action="test6" asp-route-id="@item.Id"><i class="fa fa-trash-alt fa-lg"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

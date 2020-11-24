@@ -1,0 +1,145 @@
+﻿@{
+    ViewBag.Title = "Confirm";
+
+}
+
+<br />
+<br />
+<div class="alert alert-warning" id="previous">
+    <strong>Approve the edit</strong>
+    <input type="submit" class="btn btn-warning" value="Approve" onclick="Verified()" />
+</div>
+<div class="alert alert-success" id="after" style="display:none">
+    <strong><span class="glyphicon glyphicon-ok"></span> HOD APPROVED</strong>
+</div>
+<div class="alert alert-warning" id="previous1">
+    <strong>Reject the edit</strong>
+    <input type="submit" class="btn btn-warning" value="Reject" onclick="Verified1()" />
+</div>
+<div class="alert alert-success" id="after1" style="display:none">
+    <strong><span class="glyphicon glyphicon-ok"></span> The Request is rejected </strong>
+</div>
+
+<div class="card-body">
+    Emp No : @foreach (var a in Model.Pmast)
+    {@a.Empno;
+}
+    <br />
+    Name : @foreach (var a in Model.Pmast)
+    {@a.Name;
+}
+</div>
+<div class="card-body">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col"> </th>
+                <th scope="col">Previous</th>
+                <th scope="col">After</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Emergency Contact - Name</th>
+                <td>
+                    @foreach (var a in Model.Pmast)
+                    {@a.Econtact;
+                }
+                </td>
+                <td>
+                    @foreach (var b in Model.PmastTemp)
+                    {@b.Econtact;
+                }
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Emergency Contact - Relationship</th>
+                <td>
+                    @foreach (var a in Model.Pmast)
+                    {@a.Emerrship;
+                }
+                </td>
+                <td>
+                    @foreach (var b in Model.PmastTemp)
+                    {@b.Emerrship;
+                }
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Emergency Contact - Number</th>
+                <td>
+                    @foreach (var a in Model.Pmast)
+                    {@a.Emerphone;
+                }
+                </td>
+                <td>
+                    @foreach (var b in Model.PmastTemp)
+                    {@b.Emerphone;
+                }
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Spouse - Name</th>
+                <td>
+                    @foreach (var a in Model.Pmast)
+                    {@a.Sname;
+                }
+                </td>
+                <td>
+                    @foreach (var b in Model.PmastTemp)
+                    {@b.Sname;
+                }
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Spouse - Nric No</th>
+                <td>
+                    @foreach (var a in Model.Pmast)
+                    {@a.Snric;
+                }
+                </td>
+                <td>
+                    @foreach (var b in Model.PmastTemp)
+                    {@b.Snric;
+                }
+                </td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</div>
+
+<script src="~/js/scripts/confirm.js"></script>
+
+@{
+    <script>
+        function Verified() {
+            $.ajax({
+                type: "post",
+                url: "/Dashboard/RegisterConfirm2",
+                data: { 'empno': '123456' },
+                success: function (msg) {
+                    $("#previous").hide();
+                    $("#after").show();
+                    alert(msg);
+                }
+            })
+        }
+    </script>
+    <script>
+        function Verified1() {
+            $.ajax({
+                type: "post",
+                url: "/Dashboard/RegisterConfirm2_1",
+                data: { 'empno': '123456' },
+                success: function (msg) {
+                    $("#previous1").hide();
+                    $("#after1").show();
+                    alert(msg);
+                }
+            })
+        }
+    </script>
+}

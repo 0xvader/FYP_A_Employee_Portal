@@ -1,0 +1,30 @@
+C:\Users\Mun yoo min\source\repos\DataTransfer\DataTransfer\bin\Debug\DataTransfer.exe.config
+C:\Users\Mun yoo min\source\repos\DataTransfer\DataTransfer\bin\Debug\DataTransfer.exe
+C:\Users\Mun yoo min\source\repos\DataTransfer\DataTransfer\bin\Debug\DataTransfer.pdb
+C:\Users\Mun yoo min\source\repos\DataTransfer\DataTransfer\obj\Debug\DataTransfer.csprojAssemblyReference.cache
+C:\Users\Mun yoo min\source\repos\DataTransfer\DataTransfer\obj\Debug\DataTransfer.Form1.resources
+C:\Users\Mun yoo min\source\repos\DataTransfer\DataTransfer\obj\Debug\DataTransfer.Properties.Resources.resources
+C:\Users\Mun yoo min\source\repos\DataTransfer\DataTransfer\obj\Debug\DataTransfer.csproj.GenerateResource.cache
+C:\Users\Mun yoo min\source\repos\DataTransfer\DataTransfer\obj\Debug\DataTransfer.csproj.CoreCompileInputs.cache
+C:\Users\Mun yoo min\source\repos\DataTransfer\DataTransfer\obj\Debug\DataTransfer.exe
+C:\Users\Mun yoo min\source\repos\DataTransfer\DataTransfer\obj\Debug\DataTransfer.pdb
+C:\Users\Mun yoo min\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\DataTransfer\bin\Debug\DataTransfer.exe.config
+C:\Users\Mun yoo min\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\DataTransfer\bin\Debug\DataTransfer.exe
+C:\Users\Mun yoo min\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\DataTransfer\bin\Debug\DataTransfer.pdb
+C:\Users\Mun yoo min\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\DataTransfer\obj\Debug\DataTransfer.csprojAssemblyReference.cache
+C:\Users\Mun yoo min\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\DataTransfer\obj\Debug\DataTransfer.Form1.resources
+C:\Users\Mun yoo min\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\DataTransfer\obj\Debug\DataTransfer.Properties.Resources.resources
+C:\Users\Mun yoo min\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\DataTransfer\obj\Debug\DataTransfer.csproj.GenerateResource.cache
+C:\Users\Mun yoo min\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\DataTransfer\obj\Debug\DataTransfer.csproj.CoreCompileInputs.cache
+C:\Users\Mun yoo min\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\DataTransfer\obj\Debug\DataTransfer.exe
+C:\Users\Mun yoo min\Documents\GitHub\FYP_A_Employee_Portal\Employee_Portal_Test\DataTransfer\obj\Debug\DataTransfer.pdb
+C:\Users\sevqu\Desktop\2학기\Employee_Portal_Test\DataTransfer\bin\Debug\DataTransfer.exe.config
+C:\Users\sevqu\Desktop\2학기\Employee_Portal_Test\DataTransfer\bin\Debug\DataTransfer.exe
+C:\Users\sevqu\Desktop\2학기\Employee_Portal_Test\DataTransfer\bin\Debug\DataTransfer.pdb
+C:\Users\sevqu\Desktop\2학기\Employee_Portal_Test\DataTransfer\obj\Debug\DataTransfer.csprojAssemblyReference.cache
+C:\Users\sevqu\Desktop\2학기\Employee_Portal_Test\DataTransfer\obj\Debug\DataTransfer.Form1.resources
+C:\Users\sevqu\Desktop\2학기\Employee_Portal_Test\DataTransfer\obj\Debug\DataTransfer.Properties.Resources.resources
+C:\Users\sevqu\Desktop\2학기\Employee_Portal_Test\DataTransfer\obj\Debug\DataTransfer.csproj.GenerateResource.cache
+C:\Users\sevqu\Desktop\2학기\Employee_Portal_Test\DataTransfer\obj\Debug\DataTransfer.csproj.CoreCompileInputs.cache
+C:\Users\sevqu\Desktop\2학기\Employee_Portal_Test\DataTransfer\obj\Debug\DataTransfer.exe
+C:\Users\sevqu\Desktop\2학기\Employee_Portal_Test\DataTransfer\obj\Debug\DataTransfer.pdb

@@ -1,0 +1,213 @@
+﻿@model Employee_Portal_Test.Models.History
+
+@{ ViewData["Title"] = "Create"; }
+
+
+<h4>Employee Form</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="test2">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <input type="hidden" asp-for="Id" />
+
+
+            <div class="form-group">
+                <label asp-for="Empno" class="control-label"></label>
+                <input asp-for="Empno" class="form-control" readonly />
+                <span asp-validation-for="Empno" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" maxlength="10" readonly />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" maxlength="10" readonly />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Deptno" class="control-label"></label>
+                <input asp-for="Deptno" class="form-control" maxlength="10" readonly />
+                <span asp-validation-for="Deptno" class="text-danger"></span>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card-body">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col"> </th>
+                <th scope="col">Previous</th>
+                <th scope="col">After</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Address 1</th>
+                <td>
+                    @Html.DisplayFor(model => model.Padd1)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Add1)
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Address 2</th>
+                <td>
+                    @Html.DisplayFor(model => model.Padd2)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Add2)
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">PostCode</th>
+                <td>
+                    @Html.DisplayFor(model => model.Ppostcode)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Postcode)
+
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Town</th>
+                <td>
+                    @Html.DisplayFor(model => model.Ptown)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Town)
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">State</th>
+                <td>
+                    @Html.DisplayFor(model => model.Pstate)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.State)
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Phone No</th>
+                <td>
+                    @Html.DisplayFor(model => model.Pphone)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Phone)
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Martial Status</th>
+                <td>
+                    @Html.DisplayFor(model => model.Pmstatus)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Mstatus)
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Religion</th>
+                <td>
+                    @Html.DisplayFor(model => model.Prelcode)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Relcode)
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Income Tax No</th>
+
+                <td>
+                    @Html.DisplayFor(model => model.Pitaxno)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Itaxno)
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Emergency Contact</th>
+
+                <td>
+                    @Html.DisplayFor(model => model.Pecontact)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Econtact)
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Emergency relationship</th>
+
+                <td>
+                    @Html.DisplayFor(model => model.Pemerrship)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.EMERRSHIP)
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Emergency Phone Number</th>
+
+                <td>
+                    @Html.DisplayFor(model => model.Pemerphone)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.EMERPHONE)
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Spouse Name</th>
+
+                <td>
+                    @Html.DisplayFor(model => model.Psname)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Sname)
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Spouse NRIC</th>
+
+                <td>
+                    @Html.DisplayFor(model => model.Psnric)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Snric)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<form asp-action="test2">
+    <div class="form-row">
+            <div class="form-group col-md-6">
+                <input type="submit" value="Submit" class="btn btn-primary btn-block" />
+            </div>
+            <div class="form-group col-md-6">
+                <a asp-action="test" class="btn btn-secondary btn-block"><i class="fa fa-table"></i> Back to List</a>
+            </div>
+        </div>
+</form>
+    <div>
+        <a asp-action="test">Back to List</a>
+    </div>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
