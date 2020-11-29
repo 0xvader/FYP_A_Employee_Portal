@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Employee_Portal_Test.Models.doc>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+    <form method="post" enctype="multipart/form-data" asp-action="upload">
+        <input type="file" name="ifile" required />
+        <input type="submit" value="Upload" required />
+        <hr />
+        <h3>@ViewData["Message"]</h3>
+        <table class="table">
+            <tr>
+                <th>No.</th>
+                <th>Empno</th>
+                <th>FileName</th>
+                <th>Document Type</th>
+                <th>Document view</th>
+
+            </tr>
+            @foreach (var img in Model)
+            {
+                <tr>
+                    <td>@img.docID</td>
+                    <td>@img.EMPNO</td>
+                    <td>@img.title</td>
+                    <td>@img.DocType</td>
+                    <td><img src="~/Docimg/@img.title" height="100" width="200" /></td>
+                </tr>
+            }
+        </table>
+    </form>
